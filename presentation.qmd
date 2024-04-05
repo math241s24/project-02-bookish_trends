@@ -1,6 +1,6 @@
 ---
-title: "Project title"
-subtitle: "Project 2"
+title: "Does the hype work?"
+subtitle: "Book-Tok's influence on Book Sales"
 author: "Team"
 title-slide-attributes:
   data-slide-number: none
