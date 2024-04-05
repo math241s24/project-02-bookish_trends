@@ -29,11 +29,23 @@ library(tidyverse)
 
 -   A one sentence description of your high-level goal (such as the ones listed under [Ideas](https://aallorant.github.io/math241s24/project-2-instructions.html#ideas) above.
 
+    -   Using a combination of scraped data from amazon's top 100 bestsellers and data collected myself, I will graphically demonstrate how presence on social media impacts a books rating and ranking.
+
 -   A one to two paragraph description of your goals, including your motivation. Depending on the focus of your project, the following might go in here.
 
-    -   If using particular dataset(s), a brief description of each dataset including the reason why you chose the particular dataset, its dataset, its dimensions and any other relevant metadata. (Make sure to load the data and use inline code for some of this information.)
+    -   The first data set is a pre-scraped data-set I found on "Kaggle". It took the top 100 bestselling books for Amazon at the time (November 2023) and placed them on a data frame. Some important variables include book name, author, price, rating and genre. There are 100 observations with each observation being a from the bestsellers list. The data csv file already comes in ranked order.
 
-    -   If answering a particular research question, the question itself and the reason why you chose this question.
+        ```{r}
+        library(readr)
+        Top_100_Trending_Books <- read_csv("GitHub/project-02-bookish_trends/Top-100 Trending Books.csv")
+        View(Top_100_Trending_Books)
+        ```
+
+    -   The second component of data is one I collect myself. I am going to put out a Google form where those who frequently involved in book social media communities can answer some questions. At first I wanted to hone in on specific authors and books and ask if each book individually has a social media presence. I decided to change the trajectory of my research a little bit. I decided to focus on larger trends like genre. It will be a fairly short questionare where I ask those active in book communities what genre's are the most consumed and discussed. Then I will compare that to the ranking
+
+        -   If you are using particular dataset(s), a brief description of each dataset including the reason why you chose the particular dataset, its dataset, its dimensions and any other relevant metadata. (Make sure to load the data and use inline code for some of this information.)
+
+        -   If answering a particular research question, the question itself and the reason why you chose this question.
 
 -   A weekly “plan of attack” outlining your steps to complete your project and including the team member(s) assigned to that task.
 
