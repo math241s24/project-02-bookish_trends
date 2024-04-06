@@ -47,13 +47,13 @@ View(Top_100_Trending_Books)
 
             -   2 means a high social media presence.
 
-        -    I wanted to next hone in on specific authors and books and ask if each book individually has a social media presence. Like with genre above I will go by book individually.
+        -   I wanted to next hone in on specific authors and books and ask if each book individually has a social media presence. Like with genre above I will go by book individually.
 
         -   One question will be dedicated to determining what online reading spaces specifically a person frequents. Not only will this reveal the demographics of those filling out the form. I will be able to decipher if some books are more hyped on some platforms than others.
 
 -   The reason why I am going so far as to collect my own data is because attempting to find data about online book trends is difficult with so many having different user experiences. I attempted to access the Tik-Tok API, but unfortunately I do not meet the credentials necessary to have access to free content data. Other social media platforms had similar challenges. I have always had an assumption that social media has impacted what products are popular. I myself frequent these platforms and would be interested in what the data actually does say.
 
--   In order to collect data, I will need responses. My questionare will be really open to anybody, but I am asking for anybody who is active on online book communities. Reed College students has a student body that notoriously loves reading. I believe there might be a population of students active on online book communities here at Reed College. My plan is to launch the completed Google form by April 7th through April 14th. It will be publicly viewed on the Reed College Student Body newsletters I plan to put up posters with QR codes by the 30th. If responses are slow, I need to incentive with a gift card or hold a table outside commons. My goal is at least 50 response by April 11th.
+-   In order to collect data, I will need responses. My questionnaire will be really open to anybody, but I am asking for anybody who is active on online book communities. Reed College students has a student body that notoriously loves reading. I believe there might be a population of students active on online book communities here at Reed College. My plan is to launch the completed Google form by April 7th through April 14th. It will be publicly viewed on the Reed College Student Body newsletters I plan to put up posters with QR codes by the 30th. If responses are slow, I need to incentive with a gift card or hold a table outside commons. My goal is at least 50 response by April 11th.
 
 -   April 5th-11th is dedicated to data collection and also tidying up the current "Top_100_Trending_Books" That data set is almost in a preferred tidy format except for the genre column. If a book follows multiple genre's then all the genre's are listed. I intend to use a pivot function, when analyzing on the basis of genre. Previous visualizations (on Kaggle) did not take the untidy aspect of the data into account.
 
