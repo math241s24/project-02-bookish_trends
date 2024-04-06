@@ -20,8 +20,9 @@ library(tidyverse)
 #| label: load-data
 #| message: false
 library(readr)
-Top_100_Trending_Books <- read_csv("C:/Users/mayaa/OneDrive/Documents/GitHub/project-02-bookish_trends/Top-100 Trending Books.csv")
+Top_100_Trending_Books <- read_csv("GitHub/project-02-bookish_trends/Top-100 Trending Books.csv")
 View(Top_100_Trending_Books)
+
 ```
 
 -   Using a combination of scraped data from amazon's top 100 bestsellers and data collected myself, I will graphically demonstrate how presence on social media impacts a books rating and ranking.
