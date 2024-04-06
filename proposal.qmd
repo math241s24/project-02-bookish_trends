@@ -19,23 +19,14 @@ library(tidyverse)
 ```{r load-data}
 #| label: load-data
 #| message: false
-
-## read data 
+library(readr)
+Top_100_Trending_Books <- read_csv("C:/Users/mayaa/OneDrive/Documents/GitHub/project-02-bookish_trends/Top-100 Trending Books.csv")
+View(Top_100_Trending_Books)
 ```
-
-## Reason for Choosing this Dataset
-
-## Questions and Analysis Plan
 
 -   Using a combination of scraped data from amazon's top 100 bestsellers and data collected myself, I will graphically demonstrate how presence on social media impacts a books rating and ranking.
 
 -   The first data set is a pre-scraped data-set I found on "Kaggle". It took the top 100 bestselling books for Amazon at the time (November 2023) and placed them on a data frame. Some important variables include book name, author, price, rating and genre. There are 100 observations with each observation being a from the bestsellers list. The data comma-separated value file already comes in ranked order.
-
-    ```{r}
-    library(readr)
-    Top_100_Trending_Books <- read_csv("GitHub/project-02-bookish_trends/`Top 100 Trending Books.csv`")
-    View(Top_100_Trending_Books)
-    ```
 
     -   The second component of data is one I collect myself. I am going to put out a Google form where those who frequently involved in book social media communities can answer some questions. The data from the Google form will all be accessed via Google spreadsheet. This spreadsheet can be easily turned into a csv file that I will open in R-studio.
 
@@ -43,7 +34,7 @@ library(tidyverse)
 
     -   ![](images/googlesheetsexample.png)
 
-    -   Above are some examples of what the google form might look like and how it would collect data. The first image shows a binary scale, which is not how I decided to collect data. That is purely just an example.
+    -   Above are some examples of what the Google form might look like and how it would collect data. The first image shows a binary scale, which is not how I decided to collect data. That is purely just an example.
 
         -   In order to maintain a tidy format I will be using the multiple choice grid option of the Google forms. This will also make things easier for those filling out the Google form.
 
