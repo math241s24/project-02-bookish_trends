@@ -1,0 +1,1 @@
+here I will sort collected data into two groups; books, genres and authors with a social media presence and those without. 

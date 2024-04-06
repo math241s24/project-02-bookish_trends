@@ -33,11 +33,11 @@ library(tidyverse)
 
     ```{r}
     library(readr)
-    Top_100_Trending_Books <- read_csv("GitHub/project-02-bookish_trends/`Top-100 Trending Books.csv`")
+    Top_100_Trending_Books <- read_csv("GitHub/project-02-bookish_trends/`Top 100 Trending Books.csv`")
     View(Top_100_Trending_Books)
     ```
 
-    -   The second component of data is one I collect myself. I am going to put out a Google form where those who frequently involved in book social media communities can answer some questions. The data from the Google form will all be accessed via Google spreadsheet. This spreadsheet can be easily turned into a csv file that I will open in r-studio.
+    -   The second component of data is one I collect myself. I am going to put out a Google form where those who frequently involved in book social media communities can answer some questions. The data from the Google form will all be accessed via Google spreadsheet. This spreadsheet can be easily turned into a csv file that I will open in R-studio.
 
         -   In order to maintain a tidy format I will be using the multiple choice grid option of the Google forms. This will also make things easier for those filling out the Google form.
 
@@ -55,4 +55,12 @@ library(tidyverse)
 
 -   The reason why I am going so far as to collect my own data is because attempting to find data about online book trends is difficult with so many having different user experiences. I attempted to access the Tik-Tok API, but unfortunately I do not meet the credentials necessary to have access to free content data. Other social media platforms had similar challenges. I have always had an assumption that social media has impacted what products are popular. I myself frequent these platforms and would be interested in what the data actually does say.
 
--   The final organization of your project repository. This means describing the project organization in your proposal as well as implementing that organization in your repo. Create any folders needed and place a `README.md` in each folder explaining what goes in there.
+-   In order to collect data, I will need responses. My questionare will be really open to anybody, but I am asking for anybody who is active on online book communities. Reed College students has a student body that notoriously loves reading. I believe there might be a population of students active on online book communities here at Reed College. My plan is to launch the completed Google form by April 7th through April 14th. It will be publicly viewed on the Reed College Student Body newsletters I plan to put up posters with QR codes by the 30th. If responses are slow, I need to incentive with a gift card or hold a table outside commons. My goal is at least 50 response by April 11th.
+
+-   April 5th-11th is dedicated to data collection and also tidying up the current "Top_100_Trending_Books" That data set is almost in a preferred tidy format except for the genre column. If a book follows multiple genre's then all the genre's are listed. I intend to use a pivot function, when analyzing on the basis of genre. Previous visualizations (on Kaggle) did not take the untidy aspect of the data into account.
+
+-   April 12th-15th hopefully all the data collection is complete and turned into a csv file. All data at this point will be stored in a designated data folder. I will then calculated the average scores by genre, book and author of social media presence. Books that have an average score between 0-1 and 1-2 will be separated into books without a social media presence and books with a social media presence respectably. Once separated into the new groups, I will make visualizations that compares the average ratings and ranking by social media status.
+
+-   After being peer-reviewed, I will make the appropriate changes and start prepping for the presentation
+
+-   Some folders I've added is the already mentioned data folder, a folder for me tidying the Top_100_Trending_books and collected data, a folder for sorting collected data into two groups.
