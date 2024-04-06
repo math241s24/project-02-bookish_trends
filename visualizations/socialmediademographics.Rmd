@@ -1,0 +1,1 @@
+This is where I will make three visualizations, one that shows which online book community were were the most popular and two others that shows what the correlation between hype score and ranking/rating by what community a somebody was exposed to. Were they more involved on Book-tok or book-tube and how does that impact teh genre's they are exposed to. 

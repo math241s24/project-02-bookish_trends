@@ -1,7 +1,7 @@
 ---
 title: "Project 2"
 subtitle: "Proposal"
-authors: ""
+authors: "Maya Gutierrez"
 format: html
 editor: visual
 ---
@@ -39,6 +39,12 @@ library(tidyverse)
 
     -   The second component of data is one I collect myself. I am going to put out a Google form where those who frequently involved in book social media communities can answer some questions. The data from the Google form will all be accessed via Google spreadsheet. This spreadsheet can be easily turned into a csv file that I will open in R-studio.
 
+    -   ![](images/project2googleformexample.png){width="450" height="450"}
+
+    -   ![](images/googlesheetsexample.png)
+
+    -   Above are some examples of what the google form might look like and how it would collect data. The first image shows a binary scale, which is not how I decided to collect data. That is purely just an example.
+
         -   In order to maintain a tidy format I will be using the multiple choice grid option of the Google forms. This will also make things easier for those filling out the Google form.
 
         -   For genre I will have one question dedicated to asking about genres are the most prevalent on online readings spheres. I will ask about each genre specifically and how prominent the genre is on social media on a 0-2 scale. I will assign the numerical values in r-studio. Those filling out the form will not see the numerical values.
@@ -63,4 +69,4 @@ library(tidyverse)
 
 -   After being peer-reviewed, I will make the appropriate changes and start prepping for the presentation
 
--   Some folders I've added is the already mentioned data folder, a folder for me tidying the Top_100_Trending_books and collected data, a folder for sorting collected data into two groups.
+-   Some folders I've added is the already mentioned data folder, a folder for me tidying the Top_100_Trending_books and collected data, a folder explicitly for all visualizations.
