@@ -33,7 +33,7 @@ View(Top_100_Trending_Books)
 
     -   ![](images/project2googleformexample.png){width="450" height="450"}
 
-    -   ![](images/googlesheetsexample.png)
+    -   ![](images/googlesheetsexample.png){width="2400"}
 
     -   Above are some examples of what the Google form might look like and how it would collect data. The first image shows a binary scale, which is not how I decided to collect data. That is purely just an example.
 
