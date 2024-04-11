@@ -1,8 +1,10 @@
 {
-  "hash": "db259544fb70801276df520cf81aea96",
+  "hash": "88f575ddd8f6351a481edbe9d11078f0",
   "result": {
-    "markdown": "---\ntitle: \"Project title\"\nsubtitle: \"Project 2\"\nauthor: \"Team\"\ntitle-slide-attributes:\n  data-slide-number: none\nformat: revealjs\neditor: visual\nexecute:\n  echo: false\n---\n\n\n\n\n\n\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Does the hype work?\"\nsubtitle: \"Book-Tok's influence on Book Sales\"\nauthor: \"Team\"\ntitle-slide-attributes:\n  data-slide-number: none\nformat: revealjs\neditor: visual\nexecute:\n  echo: false\n---\n\n\n\n\n\n\n",
+    "supporting": [
+      "presentation_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

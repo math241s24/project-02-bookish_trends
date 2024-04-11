@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -89,7 +89,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -153,8 +154,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a></li>
-  <li><a href="#reason-for-choosing-this-dataset" id="toc-reason-for-choosing-this-dataset" class="nav-link" data-scroll-target="#reason-for-choosing-this-dataset">Reason for Choosing this Dataset</a></li>
-  <li><a href="#questions-and-analysis-plan" id="toc-questions-and-analysis-plan" class="nav-link" data-scroll-target="#questions-and-analysis-plan">Questions and Analysis Plan</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p> </p>
+             <p>Maya Gutierrez </p>
           </div>
   </div>
     
@@ -191,14 +190,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## read data </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Top_100_Trending_Books <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"~/GitHub/project-02-bookish_trends/data/Top-100 Trending Books.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(Top_100_Trending_Books)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="reason-for-choosing-this-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="reason-for-choosing-this-dataset">Reason for Choosing this Dataset</h2>
-</section>
-<section id="questions-and-analysis-plan" class="level2">
-<h2 class="anchored" data-anchor-id="questions-and-analysis-plan">Questions and Analysis Plan</h2>
+<ul>
+<li><p>Using a combination of scraped data from amazon’s top 100 bestsellers and data collected myself, I will graphically demonstrate how presence on social media impacts a books rating and ranking.</p></li>
+<li><p>The first data set is a pre-scraped data-set I found on “Kaggle”. It took the top 100 bestselling books for Amazon at the time (November 2023) and placed them on a data frame. Some important variables include book name, author, price, rating and genre. There are 100 observations with each observation being a from the bestsellers list. The data comma-separated value file already comes in ranked order.</p>
+<ul>
+<li><p>The second component of data is one I collect myself. I am going to put out a Google form where those who frequently involved in book social media communities can answer some questions. The data from the Google form will all be accessed via Google spreadsheet. This spreadsheet can be easily turned into a csv file that I will open in R-studio.</p></li>
+<li><p><img src="images/project2googleformexample.png" width="450" height="450"></p></li>
+<li><p><img src="images/googlesheetsexample.png" class="img-fluid" width="2400"></p></li>
+<li><p>Above are some examples of what the Google form might look like and how it would collect data. The first image shows a binary scale, which is not how I decided to collect data. That is purely just an example.</p>
+<ul>
+<li><p>In order to maintain a tidy format I will be using the multiple choice grid option of the Google forms. This will also make things easier for those filling out the Google form.</p></li>
+<li><p>For genre I will have one question dedicated to asking about genres are the most prevalent on online readings spheres. I will ask about each genre specifically and how prominent the genre is on social media on a 0-2 scale. I will assign the numerical values in r-studio. Those filling out the form will not see the numerical values.</p>
+<ul>
+<li><p>0 means no social media presence.</p></li>
+<li><p>1 means some social media presence.</p></li>
+<li><p>2 means a high social media presence.</p></li>
+</ul></li>
+<li><p>I wanted to next hone in on specific authors and books and ask if each book individually has a social media presence. Like with genre above I will go by book individually.</p></li>
+<li><p>One question will be dedicated to determining what online reading spaces specifically a person frequents. Not only will this reveal the demographics of those filling out the form. I will be able to decipher if some books are more hyped on some platforms than others.</p></li>
+</ul></li>
+</ul></li>
+<li><p>The reason why I am going so far as to collect my own data is because attempting to find data about online book trends is difficult with so many having different user experiences. I attempted to access the Tik-Tok API, but unfortunately I do not meet the credentials necessary to have access to free content data. Other social media platforms had similar challenges. I have always had an assumption that social media has impacted what products are popular. I myself frequent these platforms and would be interested in what the data actually does say.</p></li>
+<li><p>In order to collect data, I will need responses. My questionnaire will be really open to anybody, but I am asking for anybody who is active on online book communities. Reed College students has a student body that notoriously loves reading. I believe there might be a population of students active on online book communities here at Reed College. My plan is to launch the completed Google form by April 7th through April 14th. It will be publicly viewed on the Reed College Student Body newsletters I plan to put up posters with QR codes by the 30th. If responses are slow, I need to incentive with a gift card or hold a table outside commons. My goal is at least 50 response by April 11th.</p></li>
+<li><p>April 5th-11th is dedicated to data collection and also tidying up the current “Top_100_Trending_Books” That data set is almost in a preferred tidy format except for the genre column. If a book follows multiple genre’s then all the genre’s are listed. I intend to use a pivot function, when analyzing on the basis of genre. Previous visualizations (on Kaggle) did not take the untidy aspect of the data into account.</p></li>
+<li><p>April 12th-15th hopefully all the data collection is complete and turned into a csv file. All data at this point will be stored in a designated data folder. I will then calculated the average scores by genre, book and author of social media presence. Books that have an average score between 0-1 and 1-2 will be separated into books without a social media presence and books with a social media presence respectably. Once separated into the new groups, I will make visualizations that compares the average ratings and ranking by social media status.</p></li>
+<li><p>After being peer-reviewed, I will make the appropriate changes and start prepping for the presentation</p></li>
+<li><p>Some folders I’ve added is the already mentioned data folder, a folder for me tidying the Top_100_Trending_books and collected data, a folder explicitly for all visualizations.</p></li>
+</ul>
 
 
 </section>

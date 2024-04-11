@@ -1,0 +1,14 @@
+{
+  "hash": "7badf4a9d7404256ce83308ff6beff19",
+  "result": {
+    "markdown": "here I will sort collected data into two groups; books, genres and authors with a social media presence and those without. ",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
