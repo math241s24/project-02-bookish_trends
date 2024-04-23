@@ -1,1 +1,26 @@
-This is where I will make three visualizations, one that shows which online book community were were the most popular and two others that shows what the correlation between hype score and ranking/rating by what community a somebody was exposed to. Were they more involved on Book-tok or book-tube and how does that impact teh genre's they are exposed to. 
+This is where I will make three visualizations, one that shows which online book community were were the most popular and two others that shows what the correlation between hype score and ranking/rating by what community a somebody was exposed to. Were they more involved on Book-tok or book-tube and how does that impact teh genre's they are exposed to.
+```{r}
+social_media_averages <- Bookish_Data_Responses_Actual_sm %>%
+  pivot_longer(cols = c("sm_tok", "sm_tube", "sm_gram", "sm_good", "sm_red", "sm_red", "sm_tumb", "sm_oth"), names_to = "variable", values_to = "value") %>%
+  group_by(variable) %>%
+  summarise(
+    average = mean(value, na.rm = TRUE))
+```
+```{r}
+social_media_averages <- social_media_averages %>%
+  mutate(social_media = variable) %>%
+  select(-variable)
+```
+
+```{r}
+social_media_averages %>% arrange(desc(average))
+```
+
+
+```{r}
+ggplot(social_media_averages, aes(x = social_media, y = average)) + 
+  geom_bar(stat = "identity") + labs(x= "Social Media Types", y= "Average on a Scale of 0-1", title = "What Bookish Social Are you a part of?")
+```
+
+
+

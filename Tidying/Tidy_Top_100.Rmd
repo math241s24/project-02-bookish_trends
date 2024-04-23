@@ -19,4 +19,7 @@ combined_row <- rbind(genre_counts[100, ], genre_counts[101, ])
 # Rename a variable in the combined row
 combined_row$genre <- "Suspense"
 ```
+```{r}
+
+```
 

@@ -1,1 +1,15 @@
-here I will sort collected data into two groups; books, genres and authors with a social media presence and those without. 
+here I will sort collected data into two groups; books, genres and authors with a social media presence and those without.
+```{r}
+
+# Pivot the data frame
+genre_averages <- bookishdata_genre1 %>%
+  pivot_longer(cols = -c(Timestamp, `Email Address`), names_to = "genre", values_to = "value") %>%
+  group_by(genre) %>%
+  summarise(
+    average = mean(value, na.rm = TRUE),
+    low = quantile(value, 0.1, na.rm = TRUE),
+    high = quantile(value, 0.9, na.rm = TRUE)
+  )
+
+```
+
