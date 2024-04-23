@@ -1,1 +1,15 @@
 this is where I will make a visualization demonstrating the correlation of ranking and hype score
+```{r}
+ggplot(merged_book, aes(x= averagescore, y=Rank)) + geom_point()
+```
+```{r}
+bookrankcor <- cor(merged_book$averagescore, merged_book$Rank)
+
+# Print the correlation coefficient
+print(bookrankcor)
+```
+```{r}
+rankmodel <- lm(Rank ~ averagescore, data = merged_book)
+summary(rankmodel)
+```
+

@@ -1,15 +1,40 @@
 here I will sort collected data into two groups; books, genres and authors with a social media presence and those without.
 ```{r}
 
+numeric_cols <- sapply(bookishdata_genre1, is.numeric)
+
 # Pivot the data frame
 genre_averages <- bookishdata_genre1 %>%
-  pivot_longer(cols = -c(Timestamp, `Email Address`), names_to = "genre", values_to = "value") %>%
+  pivot_longer(cols = names(bookishdata_genre1)[numeric_cols], names_to = "genre", values_to = "value") %>%
   group_by(genre) %>%
   summarise(
-    average = mean(value, na.rm = TRUE),
+    averagescore = mean(value, na.rm = TRUE),
     low = quantile(value, 0.1, na.rm = TRUE),
     high = quantile(value, 0.9, na.rm = TRUE)
   )
+```
 
+```{r}
+merged_genre<- merge(genre_averages, genre_counts, by = "genre")
+
+# View the merged dataset
+print(merged_genre)
+```
+Below I do what I did above, but by book's.
+
+```{r}
+numeric_cols <- sapply(bookishdata_books, is.numeric)
+
+book_averages <- bookishdata_books %>% 
+  pivot_longer(cols = names(bookishdata_books)[numeric_cols], names_to = "book title", values_to = "value") %>%
+  group_by(`book title`) %>%
+  summarise(
+    averagescore = mean(value, na.rm = TRUE))
+```
+```{r}
+merged_book<- merge(book_averages, amazontop_Sheet1, by = "book title")
+
+# View the merged dataset
+print(merged_book)
 ```
 

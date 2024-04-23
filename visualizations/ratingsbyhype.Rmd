@@ -1,1 +1,9 @@
 this is where I will make a visualization demonstrating the correlation of rating and hype score
+```{r}
+ggplot(merged_book, aes(x=averagescore, y=rating)) + geom_point()
+```
+```{r}
+ratemodel <- lm(rating ~ averagescore, data = merged_book)
+summary(ratemodel)
+```
+
