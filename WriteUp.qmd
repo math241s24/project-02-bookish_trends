@@ -1,0 +1,230 @@
+---
+title: "Bookish Trends: Does the hype work?"
+format: html
+editor: visual
+---
+
+```         
+```
+
+```{r}
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(tidyr)
+```
+
+```{r}
+amazontop <- read_csv("~/GitHub/project-02-bookish_trends/data/amazontop - Sheet1.csv")
+
+bookishdata_sm <- read_csv("~/GitHub/project-02-bookish_trends/data/Bookish Data (Responses) Actual - sm.csv")
+  
+bookishdata_genre <- read_csv("~/GitHub/project-02-bookish_trends/data/bookishdata - genre1.csv")
+View(bookishdata_genre)
+
+bookishdata_books <- read_csv("~/GitHub/project-02-bookish_trends/data/bookishdata - books.csv")
+View(bookishdata_books)
+```
+
+# **Write-up**
+
+## **Introduction :**
+
+What does reading look like in 2024? Scroll enough on a social media platform and one might stumble on a young adult raving about her favorite book. They might be sharing they favorite book tropes or rating her recent reads. It makes sense that an online space has popped up to account for a very popular hobby. These online bookish spaces also allow for a different type of content: hauls. Creators going to stores and splurging on books that they never share reviews on. Their content becomes focused on the special editions of books rather than the substance inside them. Bookshelf tours rather than comprehensive ratings.
+
+I do not want to give the impression that I have an overall cynical view of online book spaces, I just spend a lot of free time on there. I see much of the same books, authors, tropes, and genre's recommended over and over. In this era of consumption, I do wonder if the hype, the buzz and level of discussion of a book actually makes an impact?
+
+Through Kaggle (a data science competition platform and online community of data scientists and machine learning practitioners under Google LLC) I found a scrapped data frame made by a user. This was a data frame of Amazon's top 100 bestselling books of 2023 made Ansh Tanwar. Some variables of note in this data set were the title, author, genre, (variable saved in a list separated by commas), book rating, and book ranking.
+
+All this was important data to have on hand, but what I really wanted was to compare this data to one a lot more difficult to calculate. I wanted to connect a book's presence online to it's rating or even it's overall rating on amazon. I decided that I would create a questionnaire and use input from those active on bookish social media to give books a presence rating. Small note, collecting data this way was an from using API's directly from social media platforms. I did not have the appropriate credentials to request API usage or it would cost a fee I could not pay.
+
+This approach part of this write-up will tackle both the data-collection portion and what I decided to do with the data once I had the data.
+
+**Question 1:**
+
+How does a book's/genre's social media presence impact book sales/ratings?
+
+#### **Approach (Data Collection):**
+
+```{r}
+glimpse(bookishdata_sm)
+```
+
+When it came to the data collection portion of my project, I made the style of the questions with the intention of making the subsequent data frame as tidy as possible. The above data frame is just an example of how I collected data.
+
+![](images/formpic.png){width="750"}
+
+The above question shows the format of the entirety of my questionnaire. There would be a set number of possible responses an a variety of categories of a question. This way of asking actually made response collection relatively quick despite the 200+ questions. I would convert the responses to numerical variables as needed.
+
+If you would like to view the questionnaire from the perspective as one of the people I collected data from, here is the link to view this form: <https://forms.gle/oqg772SjDWP5c41J6>
+
+To give every individual user an ID, I did keep their email and time stamp of the response.
+
+As far as data collection goes, the avenues I was counting on to get eyes on my project were delayed to a student death on campus, so that aspect of my project was prolonged. I did use posters, student newsletters, and word of mouth to get as many responses as possible. I also had to offer 20 of my own dollars to get my interaction as well. After all of this I did have 33 responses, which was enough to continue my project.
+
+Why did I rely on Reed college students? Despite them being accessible to me, I also was looking for a demographic that would have associations on online book platforms. This type of person would have to be interested in reading as a hobby (or the idea of reading as a hobby), but also have some sort of online proficiency. I believed that a younger demographic would capture that more as young adults are typically going to have a social media presence. Reedies also do have a strong capacity for reading in general. I believed targeting Reed college would garner results that represented my demographic fairly well, but also would give me enough responses to be able to learn something from the data.
+
+The methodology behind my questions was very much structured after the Amazon's bestsellers list. Every single book in the Amazon's Top 100 was asked about in terms of social media presence. I used a slightly different metric of measurement for sm_type and the other two major questions. sm_type I wanted more of a binary, I am active here or not, meanwhile for the other question I wanted more of a scale, since social media presence was the objective of the entire questionnaire.
+
++-----------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+----------------------------------------------------------------------------+
+| Variable: | Question:                                                                                                         | Response:                                | Variants:                                                                  |
++===========+===================================================================================================================+==========================================+============================================================================+
+| smtype    | What online book communities are you active in (as a creator or viewer)?                                          | 0: No, I'm not active in this community. | sm_tok= Tik-Tok(booktok)                                                   |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   | 1: Yes, I'm active in this community     | sm_tube=                                                                   |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | booktube(youtube)                                                          |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | sm_gram=                                                                   |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | bookgram(booktube)                                                         |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | sm_good=                                                                   |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | Goodreads                                                                  |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | sm_red= Reddit                                                             |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | sm_tumb=Tumblr                                                             |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   |                                          | sm_oth= Other Book Centered Website/App                                    |
++-----------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+----------------------------------------------------------------------------+
+| genre     | What kind of Social Media presence do the following categories, topics, or genres have on your book-related feed? | 0: No Social Media Presence              | genre\_(category, genre, topic name)                                       |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   | 1: Some Social Media Presence            | Ex. genre_bib=Biblical Studies - Prophecy, Christian Theology - Eschatolog |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   | 2: High Social Media Presence            |                                                                            |
++-----------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+----------------------------------------------------------------------------+
+| book      | What kind of Social Media presence do the following book/series have on your book-related feed?                   | 0: No Social Media Presence              | booktitle by bookauthor                                                    |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   | 1: Some Social Media Presence            |                                                                            |
+|           |                                                                                                                   |                                          |                                                                            |
+|           |                                                                                                                   | 2: High Social Media Presence            |                                                                            |
++-----------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------+----------------------------------------------------------------------------+
+
+: Book Questionnaire Codebook
+
+In the data frame from Kaggle, Author and book title were separated, but I opted to combine them in case someone filling out the questionnaire recognized one and not the other. This could help inform how they would answer the question and how they were measure social media presence. I also reverted this back after data collection. It was very important the genre and book titles completely matched the Amazon's bestseller's list because I wanted to merge them together to put "presence score" on a scatterplot with rating or ranking. This presence score would be collected from averaging all the responses of social media presence and putting it on a scale between 0-2. Anything between 0-1 would mean the book/genre in question has no/some social media presence, while between 1-2 would mean some social media presence and high social media presence.
+
+With the scrapped data I found it was not in a tidy format, so I had to do that work myself with genre. Interestingly I found, one of the authors was recorded as Unknown even though the page it was scrapped from had an author. The author was Ted Crux, the Republican Governor of Texas known for being hyper-conservative. I do believe this data scientist probably tampered to omit their name, but kept their book on the list. I fixed this and also fixed some shifting I found between the rows and columns.
+
+The next part of my project was to effectively merge the scraped data and collected data to answer my project question.
+
+**Analysis (2-3 code blocks, 2 figures, text/code comments as needed):**
+
+Below is my Analysis in Terms of Book Genre:
+
+-   I made a table which gave me the genre's that had the highest proportion of presence on the list.
+
+-   I made a visualization to easier conceptualize my finding.
+
+-   I merged the average social media presence score of genre and the proportion on the Amazon top 100.
+
+-   I plotted this on a scatter plot.
+
+-   I performed a linear regression analysis.
+
+```{r}
+#The top 10 genre's present in Amazon's the Top 100
+genre_tidy <- separate_rows(amazontop, genre, sep = ",\\s*")
+
+genre_counts <- as.data.frame(table(genre_tidy$genre))
+colnames(genre_counts) <- c("genre", "count")
+genre_counts<- genre_counts %>% mutate(proportion= count/ sum(count))
+
+genre_counts <- genre_counts %>% arrange(desc(proportion))
+slice_head(genre_counts, n= 10)
+```
+
+```{r}
+#See top genre's
+originalgenredistribution <- genre_counts %>%
+  filter(count > 2) %>%
+  arrange(desc(genre))
+
+originalhisto <- ggplot(originalgenredistribution, aes(x = genre, y = count, fill = count > 10)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +  
+  scale_fill_manual(values = c("FALSE" = "#3182bd", "TRUE" = "#de2d26")) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        panel.background = element_rect(fill = "white")) + 
+  labs(title = "Top genre's represented in Amazon's Top 100 bestselling books of 2023")
+
+originalhisto
+```
+
+```{r}
+#Merging Data
+numeric_cols <- sapply(bookishdata_genre, is.numeric)
+
+# Pivot the data frame
+genre_averages <- bookishdata_genre %>%
+  pivot_longer(cols = names(bookishdata_genre)[numeric_cols], names_to = "genre", values_to = "value") %>%
+  group_by(genre) %>%
+  summarise(
+    averagescore = mean(value, na.rm = TRUE),
+    low = quantile(value, 0.1, na.rm = TRUE),
+    high = quantile(value, 0.9, na.rm = TRUE)
+  )
+
+merged_genre<- merge(genre_averages, genre_counts, by = "genre")
+
+# View the merged dataset
+print(merged_genre)
+```
+
+```{r}
+ggplot(merged_genre, aes(x=proportion, y=averagescore)) + geom_point() + labs(x= "Proportion of Amazon's Top 100", y= "Average Social Media presence Scale 0-2", title= "Bestselling Makeup by Genre and Social Media Presence Rating")
+```
+
+```{r}
+genremodel <- lm(proportion ~ averagescore, data = merged_genre) 
+summary(genremodel)
+```
+
+Below is my Analysis in Terms of Book itself:
+
+-   I merged the average social media presence score of a book and the overall rating/ranking of a book.
+
+-   I plotted this on a scatter plot.
+
+-   I performed a linear regression analysis.
+
+```{r}
+numeric_cols <- sapply(bookishdata_books, is.numeric)
+
+book_averages <- bookishdata_books %>% 
+  pivot_longer(cols = names(bookishdata_books)[numeric_cols], names_to = "book title", values_to = "value") %>%
+  group_by(`book title`) %>%
+  summarise(
+    averagescore = mean(value, na.rm = TRUE))
+
+merged_book<- merge(book_averages, amazontop, by = "book title")
+
+# View the merged dataset
+print(merged_book)
+```
+
+```{r}
+ggplot(merged_book, aes(x=averagescore, y=rating)) + geom_point()
+```
+
+```{r}
+ratemodel <- lm(rating ~ averagescore, data = merged_book)
+summary(ratemodel)
+```
+
+```{r}
+ggplot(merged_book, aes(x= averagescore, y=Rank)) + geom_point()
+```
+
+```{r}
+
+```
+
+#### **Discussion (1-3 paragraphs):**
+
+Immediately distributions of color usage were apparent with the density graphs. Both Burnt ember and Phthalo Green, for example, peaked between season 1 and 10. Prussian Blue and Liquid Black seemed to peak during the middle of seasons. Liquid Clear and Black Gresso were most used after season 15. Other colors were consistent through all the seasons; Yellow Ochre, Van Dyke Brown, Titanium White, Sapphire Green, Phthalo Blue, Indian Yellow, Cadmium Yellow, Bright Red, Alizarin Crimson. 
+
+The second plot, I believe, allowed us to compare the colors in relation to each other. Although both Burnt Ember and Phthalo Green peaked in their individual usage, Burnt Ember was objectively the most commonly used color at the time. Liquid clear not only peaked in the later seasons, but was used more often than other colors. Although the density graphs by color do support this assertion, this additional graph makes comparison much easier. 
+
+### 
