@@ -30,13 +30,13 @@ View(bookishdata_books)
 
 ## **Introduction :**
 
-What does reading look like in 2024? Scroll enough on a social media platform and one might stumble on a young adult raving about her favorite book. They might be sharing they favorite book tropes or rating her recent reads. It makes sense that an online space has popped up to account for a very popular hobby. These online bookish spaces also allow for a different type of content: hauls. Creators going to stores and splurging on books that they never share reviews on. Their content becomes focused on the special editions of books rather than the substance inside them. Bookshelf tours rather than comprehensive ratings.
+What does reading look like in 2024? Scroll enough on a social media platform and one might stumble on a young adult raving about their favorite book. They might be sharing they favorite book tropes or rating their recent reads. These online bookish spaces also allow for a different type of content: hauls. Creators going to stores and splurging on books that they never share reviews on. Their content becomes focused on the special editions of books rather than the substance inside them. Bookshelf tours rather than comprehensive ratings.
 
 I do not want to give the impression that I have an overall cynical view of online book spaces, I just spend a lot of free time on there. I see much of the same books, authors, tropes, and genre's recommended over and over. In this era of consumption, I do wonder if the hype, the buzz and level of discussion of a book actually makes an impact?
 
 Through Kaggle (a data science competition platform and online community of data scientists and machine learning practitioners under Google LLC) I found a scrapped data frame made by a user. This was a data frame of Amazon's top 100 bestselling books of 2023 made Ansh Tanwar. Some variables of note in this data set were the title, author, genre, (variable saved in a list separated by commas), book rating, and book ranking.
 
-All this was important data to have on hand, but what I really wanted was to compare this data to one a lot more difficult to calculate. I wanted to connect a book's presence online to it's rating or even it's overall rating on amazon. I decided that I would create a questionnaire and use input from those active on bookish social media to give books a presence rating. Small note, collecting data this way was an from using API's directly from social media platforms. I did not have the appropriate credentials to request API usage or it would cost a fee I could not pay.
+All this was important data to have on hand, but what I really wanted was to compare this data to one a lot more difficult to calculate. I wanted to connect a book's presence online to it's rating or even it's overall ranking on amazon. I decided that I would create a questionnaire and use input from those active on bookish social media to give books a presence rating. Small note, collecting data this way was an from using API's directly from social media platforms. I did not have the appropriate credentials to request API usage or it would cost a fee I could not pay.
 
 This approach part of this write-up will tackle both the data-collection portion and what I decided to do with the data once I had the data.
 
@@ -58,7 +58,7 @@ The above question shows the format of the entirety of my questionnaire. There w
 
 If you would like to view the questionnaire from the perspective as one of the people I collected data from, here is the link to view this form: <https://forms.gle/oqg772SjDWP5c41J6>
 
-To give every individual user an ID, I did keep their email and time stamp of the response.
+To give every individual user an ID, I did keep their email and time stamp of the response. This was never shared.
 
 As far as data collection goes, the avenues I was counting on to get eyes on my project were delayed to a student death on campus, so that aspect of my project was prolonged. I did use posters, student newsletters, and word of mouth to get as many responses as possible. I also had to offer 20 of my own dollars to get my interaction as well. After all of this I did have 33 responses, which was enough to continue my project.
 
@@ -106,7 +106,7 @@ The methodology behind my questions was very much structured after the Amazon's 
 
 In the data frame from Kaggle, Author and book title were separated, but I opted to combine them in case someone filling out the questionnaire recognized one and not the other. This could help inform how they would answer the question and how they were measure social media presence. I also reverted this back after data collection. It was very important the genre and book titles completely matched the Amazon's bestseller's list because I wanted to merge them together to put "presence score" on a scatterplot with rating or ranking. This presence score would be collected from averaging all the responses of social media presence and putting it on a scale between 0-2. Anything between 0-1 would mean the book/genre in question has no/some social media presence, while between 1-2 would mean some social media presence and high social media presence.
 
-With the scrapped data I found it was not in a tidy format, so I had to do that work myself with genre. Interestingly I found, one of the authors was recorded as Unknown even though the page it was scrapped from had an author. The author was Ted Crux, the Republican Governor of Texas known for being hyper-conservative. I do believe this data scientist probably tampered to omit their name, but kept their book on the list. I fixed this and also fixed some shifting I found between the rows and columns.
+With the scrapped data I found it was not in a tidy format, so I had to do that work myself with genre. Interestingly I found, one of the authors was recorded as Unknown even though the page it was scrapped from had an author. The author was Ted Cruz, the Republican Governor of Texas known for being hyper-conservative. I do believe this data scientist probably tampered to omit their name, but kept their book on the list. I fixed this and also fixed some shifting I found between the rows and columns.
 
 The next part of my project was to effectively merge the scraped data and collected data to answer my project question.
 
@@ -173,21 +173,24 @@ print(merged_genre)
 ```
 
 ```{r}
-ggplot(merged_genre, aes(x=proportion, y=averagescore)) + geom_point() + labs(x= "Proportion of Amazon's Top 100", y= "Average Social Media presence Scale 0-2", title= "Bestselling Makeup by Genre and Social Media Presence Rating")
+
+ggplot(merged_genre, aes(x=averagescore, y=proportion)) + geom_point() + labs(x= "Average Social Media presence Scale 0-2", y= "Proportion of Amazon's Top 100", title= "Bestselling Makeup by Genre and Social Media Presence Rating") + geom_smooth(method = "lm", se = FALSE, color = "blue")
 ```
 
 ```{r}
-genremodel <- lm(proportion ~ averagescore, data = merged_genre) 
+genremodel <- lm(averagescore ~ proportion, data = merged_genre) 
 summary(genremodel)
 ```
 
 Below is my Analysis in Terms of Book itself:
 
--   I merged the average social media presence score of a book and the overall rating/ranking of a book.
+-   I merged the average social media presence score of a book and the overall ranking of a book.
 
 -   I plotted this on a scatter plot.
 
 -   I performed a linear regression analysis.
+
+-   Repeat above steps with ranking.
 
 ```{r}
 numeric_cols <- sapply(bookishdata_books, is.numeric)
@@ -205,7 +208,7 @@ print(merged_book)
 ```
 
 ```{r}
-ggplot(merged_book, aes(x=averagescore, y=rating)) + geom_point()
+ggplot(merged_book, aes(x=averagescore, y=rating)) + geom_point() + labs(title= "Average Social Media Score by Rating") + geom_smooth(method = "lm", se = FALSE, color = "blue") 
 ```
 
 ```{r}
@@ -214,17 +217,33 @@ summary(ratemodel)
 ```
 
 ```{r}
-ggplot(merged_book, aes(x= averagescore, y=Rank)) + geom_point()
+ggplot(merged_book, aes(x= averagescore, y=Rank)) + geom_point() + labs("Average Social Media Score by Ranking") + geom_smooth(method = "lm", se = FALSE, color = "blue") 
 ```
 
 ```{r}
+bookrankcor <- cor(merged_book$averagescore, merged_book$Rank)
 
+# Print the correlation coefficient
+print(bookrankcor)
+```
+
+```{r}
+rankmodel <- lm(Rank ~ averagescore, data = merged_book)
+summary(rankmodel)
 ```
 
 #### **Discussion (1-3 paragraphs):**
 
-Immediately distributions of color usage were apparent with the density graphs. Both Burnt ember and Phthalo Green, for example, peaked between season 1 and 10. Prussian Blue and Liquid Black seemed to peak during the middle of seasons. Liquid Clear and Black Gresso were most used after season 15. Other colors were consistent through all the seasons; Yellow Ochre, Van Dyke Brown, Titanium White, Sapphire Green, Phthalo Blue, Indian Yellow, Cadmium Yellow, Bright Red, Alizarin Crimson. 
+Overall after of all this, I did not really find a lot of tangible evidence of a connection between social media presence and book success (whether critically or through sales). I did however find a connection by genre. There was the statically significant correlation being social media presence and genre. Genre was calculated with how frequent it appeared on the Amazon's bestsellers list. The null in this instance was that there is no correlation between social media presence and proportion of amazon's bestselling list. Since, the p-value was roughly .025, means that I must reject the null and the alternative hypothesis is true. There is a correlation between social media presence and a genre's proportion of amazon's bestselling list. The frequency a genre a spoken about online increases the likelihood that genre will emerge in top book sales.
 
-The second plot, I believe, allowed us to compare the colors in relation to each other. Although both Burnt Ember and Phthalo Green peaked in their individual usage, Burnt Ember was objectively the most commonly used color at the time. Liquid clear not only peaked in the later seasons, but was used more often than other colors. Although the density graphs by color do support this assertion, this additional graph makes comparison much easier. 
+However a lot of these results can just aid themselves to the truth that some genre's are just more popular than others. Social media may not be making these genre's gain success in sales, but rather the genre themselves just garner more engagement.
+
+I also cannot ignore the possibility for bias by those who self selected to partake in the questionnaire. Those who took this survey might have heightened or exaggerated opinions about books and their presence online.
+
+I did a lot of work for this project to come to the conclusion that there really is not any strong evidence of a connection between Social media and Book sales/rating. I did multiple regession analsyis tests and visualizations. I underestimated the popularity of children's books, whose demographic are not on online book platforms. Children and their parents may learn about new books from word of mouth and not necessarily by engaging online. There can be some overlap between parents and book centered social media, but not much.
+
+I do not believe that this project was in vain. When I was somewhat fruitless in my project, I did consider changing the course of my project to do more predictive modeling based one the type of social media people were active on or how frequent they were online. The time component question I asked about was very much ripe with user error and subjectivty to the extreme that attempting predictive modeling might be as helpful. Just because I did not find a strong correlation does not mean that this project was a waste.
+
+I see the results as somewhat hopeful. Readers are not mindless who will buy whatever is advertised. The hype surrounding books is not enough to cause a book to skyrocket in sales. Substance is also considered. Overall this project showed that the growing "aesthetic of reading" does not trump the craft writing
 
 ### 
