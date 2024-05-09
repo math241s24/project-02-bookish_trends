@@ -1,7 +1,87 @@
 ---
-title: "Your project title"
+title: "Bookish Trends: Does the hype work?"
 format: html
 editor: visual
 ---
 
-This project was developed by XX. For [MATH/STAT241](https://aallorant.github.io/math241s24/) at Reed College. The team is comprised of the following team members.
+```{}
+```
+
+```{r}
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(tidyr)
+```
+
+```{r}
+amazontop <- read_csv("~/GitHub/project-02-bookish_trends/data/amazontop - Sheet1.csv")
+
+bookishdata_sm <- read_csv("~/GitHub/project-02-bookish_trends/data/Bookish Data (Responses) Actual - sm.csv")
+  
+bookishdata_genre <- read_csv("~/GitHub/project-02-bookish_trends/data/bookishdata - genre1.csv")
+View(bookishdata_genre)
+
+bookishdata_books <- read_csv("~/GitHub/project-02-bookish_trends/data/bookishdata - books.csv")
+View(bookishdata_books)
+```
+
+# **Write-up**
+
+## **Introduction (1-2 paragraphs):**
+
+What does reading look like in 2024? Scroll enough on a social media platform and one might stumble on a young adult raving about her favorite book. She might be sharing her favorite book tropes or rating her recent reads. It makes sense that an online space has popped up to account for a very popular hobby. These online bookish spaces also allow for a different type of content: hauls. Creators going to stores and splurging on books that they never share reviews on. Their content becomes focused on the special editions of books rather than the substance inside them. Bookshelf tours rather than comprehensive ratings.
+
+I do not want to give the impression that I have an overall cynical view of online book spaces, I just spend a lot of free time on there. I see much of the same books, authors, tropes, and genre's recommended over and over. In this era of consumption, I do wonder if the hype, the buzz and level of discussion of a book actually makes an impact?
+
+Through Kaggle (a data science competition platform and online community of data scientists and machine learning practitioners under Google LLC) I found a scrapped data frame made by a user. This was a data frame of Amazon's top 100 bestselling books of 2023 made Ansh Tanwar. Some variables of note in this data set were the title, author, genre, (variable saved in a list separated by commas), book rating, and book ranking.
+
+All this was important data to have on hand, but what I really wanted was to compare this data to one a lot more difficult to calculate. I wanted to connect a book's presence online to it's rating or even it's overall rating on amazon. I decided that I would create a questionnaire and use input from those active on bookish social media to give books a presence rating. Small note, collecting data this way was an from using API's directly from social media platforms. I did not have the appropriate credentials to request API usage or it would cost a fee I could not pay.
+
+**Question 1:**
+
+How does a book's/genre's social media presence impact book sales/ratings?
+
+#### **Approach (1-2 paragraphs):**
+
+```{r}
+glimpse(book)
+```
+
+When it came to the data collection portion of my project, I made the style of the questions with the intention of making the subsequent data frame as tidy as possible
+
+#### **Analysis (2-3 code blocks, 2 figures, text/code comments as needed):**
+
+Put both plots and code blocks. 
+
+#### **Discussion (1-3 paragraphs):**
+
+Immediately distributions of color usage were apparent with the density graphs. Both Burnt ember and Phthalo Green, for example, peaked between season 1 and 10. Prussian Blue and Liquid Black seemed to peak during the middle of seasons. Liquid Clear and Black Gresso were most used after season 15. Other colors were consistent through all the seasons; Yellow Ochre, Van Dyke Brown, Titanium White, Sapphire Green, Phthalo Blue, Indian Yellow, Cadmium Yellow, Bright Red, Alizarin Crimson. 
+
+The second plot, I believe, allowed us to compare the colors in relation to each other. Although both Burnt Ember and Phthalo Green peaked in their individual usage, Burnt Ember was objectively the most commonly used color at the time. Liquid clear not only peaked in the later seasons, but was used more often than other colors. Although the density graphs by color do support this assertion, this additional graph makes comparison much easier. 
+
+### **Question 2:**
+
+Which seasons have the most diverse color palettes? Which seasons have the most abundant color palettes?
+
+#### **Introduction (1-2 paragraphs):**
+
+After inspecting the trends of color over time, we were intrigued by Bob Ross's color use. Although we knew how individual color usage fluctuated over time, we wanted to know how the variety of colors changed over time as well.  
+
+#### **Approach (1-2 paragraphs):**
+
+We decided on using two different methods for calculating diversity. We actually used indexes typically common with calculating species density in nature. 
+
+The first was the simpson’s diversity index, which is a measure of diversity which takes into account the number of species present , as well as the relative abundance of each species. The scale ranges from 0 to 1. 0 represents infinite diversity, while 1 represents no diversity.  
+
+The second measure of diversity we used was the Shannon Diversity index, which is in terms of H. The higher the H, the higher the diversity of species in a particular community. The lower the value of H, the lower the diversity . A value of H=0 indicates that there is only one species in a community. The Shannon diversity index takes into account richness and evenness, which is slightly different from the Simpson’s diversity index. Typical ranges in this scale are between 1.5 and 3.5. 
+
+#### **Analysis (2-3 code blocks, 2 figures, text/code comments as needed):**
+
+Put two plots and code
+
+#### **Discussion (1-3 paragraphs):**
+
+We used the mutate function to calculate Simpson Diversity Index and Shannon Diversity Index values for each season. There was one point for every season. Looking at the two distinct graphs, both give the impression that color diversity increased over the 30 seasons. Both graphs have the lowest calculated diversity value for the first season and then ending at the higher end of the calculated diversity values. 
+
+One explanation from the sharp change after season 1 for diversity could be answered by our work in color distribution. Burnt Ember objectively was such a commonly used color in the earlier seasons. The lessened use of Burnt Ember and increased use of other colors after the first few seasons can explain the apparent shift in color diversity over the course of 30 seasons.
