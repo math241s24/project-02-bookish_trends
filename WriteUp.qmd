@@ -58,11 +58,11 @@ The above question shows the format of the entirety of my questionnaire. There w
 
 If you would like to view the questionnaire from the perspective as one of the people I collected data from, here is the link to view this form: <https://forms.gle/oqg772SjDWP5c41J6>
 
-To give every individual user an ID, I did keep their email and time stamp of the response. This was never shared.
+To give every individual user an ID, I did keep their email and time stamp of the response.
 
 As far as data collection goes, the avenues I was counting on to get eyes on my project were delayed to a student death on campus, so that aspect of my project was prolonged. I did use posters, student newsletters, and word of mouth to get as many responses as possible. I also had to offer 20 of my own dollars to get my interaction as well. After all of this I did have 33 responses, which was enough to continue my project.
 
-Why did I rely on Reed college students? Despite them being accessible to me, I also was looking for a demographic that would have associations on online book platforms. This type of person would have to be interested in reading as a hobby (or the idea of reading as a hobby), but also have some sort of online proficiency. I believed that a younger demographic would capture that more as young adults are typically going to have a social media presence. Reedies also do have a strong capacity for reading in general. I believed targeting Reed college would garner results that represented my demographic fairly well, but also would give me enough responses to be able to learn something from the data.
+Why did I rely on Reed college students? Despite them being accessible to me, I also was looking for a demographic that would have associations on online book platforms. This type of person would have to be interested in reading as a hobby), but also have some sort of online proficiency. I believed that a younger demographic would capture that more as young adults are typically going to have a social media presence. Reedies also do have a strong capacity for reading in general. I believed targeting Reed college would garner results that represented my demographic fairly well, but also would give me enough responses to be able to learn something from the data.
 
 The methodology behind my questions was very much structured after the Amazon's bestsellers list. Every single book in the Amazon's Top 100 was asked about in terms of social media presence. I used a slightly different metric of measurement for sm_type and the other two major questions. sm_type I wanted more of a binary, I am active here or not, meanwhile for the other question I wanted more of a scale, since social media presence was the objective of the entire questionnaire.
 
@@ -116,7 +116,7 @@ Below is my Analysis in Terms of Book Genre:
 
 -   I made a table which gave me the genre's that had the highest proportion of presence on the list.
 
--   I made a visualization to easier conceptualize my finding.
+-   I made a visualization to easier conceptualize my findings.
 
 -   I merged the average social media presence score of genre and the proportion on the Amazon top 100.
 
@@ -188,7 +188,7 @@ Below is my Analysis in Terms of Book itself:
 
 -   I plotted this on a scatter plot.
 
--   I performed a linear regression analysis.
+-   I performed a linear regression analysis on the two variables.
 
 -   Repeat above steps with ranking.
 
@@ -232,18 +232,22 @@ rankmodel <- lm(Rank ~ averagescore, data = merged_book)
 summary(rankmodel)
 ```
 
-#### **Discussion (1-3 paragraphs):**
+#### **Discussion:**
 
 Overall after of all this, I did not really find a lot of tangible evidence of a connection between social media presence and book success (whether critically or through sales). I did however find a connection by genre. There was the statically significant correlation being social media presence and genre. Genre was calculated with how frequent it appeared on the Amazon's bestsellers list. The null in this instance was that there is no correlation between social media presence and proportion of amazon's bestselling list. Since, the p-value was roughly .025, means that I must reject the null and the alternative hypothesis is true. There is a correlation between social media presence and a genre's proportion of amazon's bestselling list. The frequency a genre a spoken about online increases the likelihood that genre will emerge in top book sales.
 
 However a lot of these results can just aid themselves to the truth that some genre's are just more popular than others. Social media may not be making these genre's gain success in sales, but rather the genre themselves just garner more engagement.
 
-I also cannot ignore the possibility for bias by those who self selected to partake in the questionnaire. Those who took this survey might have heightened or exaggerated opinions about books and their presence online.
+I also cannot ignore the possibility for bias by those who self selected to partake in the questionnaire. Those who took this survey might have heightened or exaggerated opinions about books and their presence online. Also this questionnaire was exclusive to Reed College students and that might be a confounding variable as well. I can not apply the results of this questionnaire to the whole population on bookish online spaces, just those who also attend Reed college.
 
-I did a lot of work for this project to come to the conclusion that there really is not any strong evidence of a connection between Social media and Book sales/rating. I did multiple regession analsyis tests and visualizations. I underestimated the popularity of children's books, whose demographic are not on online book platforms. Children and their parents may learn about new books from word of mouth and not necessarily by engaging online. There can be some overlap between parents and book centered social media, but not much.
+I will also not how I dropped my focus on social media. It was interesting to glean the results of what online spaces were most present in my questionnaire, but it had no impact overall on my central question, so I dropped it from my write up.
 
-I do not believe that this project was in vain. When I was somewhat fruitless in my project, I did consider changing the course of my project to do more predictive modeling based one the type of social media people were active on or how frequent they were online. The time component question I asked about was very much ripe with user error and subjectivty to the extreme that attempting predictive modeling might be as helpful. Just because I did not find a strong correlation does not mean that this project was a waste.
+I underestimated the popularity of children's books, whose demographic are not on online book platforms. Children and their parents may learn about new books from word of mouth and not necessarily by engaging online. There can be some overlap between parents and book centered social media, but not much.
 
-I see the results as somewhat hopeful. Readers are not mindless who will buy whatever is advertised. The hype surrounding books is not enough to cause a book to skyrocket in sales. Substance is also considered. Overall this project showed that the growing "aesthetic of reading" does not trump the craft writing
+## **Conclusion:**
+
+I did a lot of work for this project to come to the conclusion that there really is not any strong evidence of a connection between Social media and Book sales/rating. I did multiple regession analsyis tests and visualizations based on both rating and ranking on Amazon's Bestseller's List and if anything the weak correlations were negative.
+
+I do not believe that this project was in vain. When I was somewhat fruitless in my project, I did consider changing the course of my project to do more predictive modeling based one the type of social media people were active on or how frequent they were online. Just because I did not find a strong correlation does not mean that this project was a waste. In fact, I would argue the opposite. I see the results as somewhat hopeful. Readers are not mindless who will buy whatever is advertised. The hype surrounding books is not enough to cause a book to skyrocket in sales. Substance is also considered. Overall this project showed that the growing "aesthetic of reading" does not trump the craft of writing.
 
 ### 
