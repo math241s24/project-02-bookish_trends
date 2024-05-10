@@ -104,6 +104,8 @@ The methodology behind my questions was very much structured after the Amazon's 
 
 : Book Questionnaire Codebook
 
+Note: there was not present Codebook for the scrapped dataset.
+
 In the data frame from Kaggle, Author and book title were separated, but I opted to combine them in case someone filling out the questionnaire recognized one and not the other. This could help inform how they would answer the question and how they were measure social media presence. I also reverted this back after data collection. It was very important the genre and book titles completely matched the Amazon's bestseller's list because I wanted to merge them together to put "presence score" on a scatterplot with rating or ranking. This presence score would be collected from averaging all the responses of social media presence and putting it on a scale between 0-2. Anything between 0-1 would mean the book/genre in question has no/some social media presence, while between 1-2 would mean some social media presence and high social media presence.
 
 With the scrapped data I found it was not in a tidy format, so I had to do that work myself with genre. Interestingly I found, one of the authors was recorded as Unknown even though the page it was scrapped from had an author. The author was Ted Cruz, the Republican Governor of Texas known for being hyper-conservative. I do believe this data scientist probably tampered to omit their name, but kept their book on the list. I fixed this and also fixed some shifting I found between the rows and columns.
