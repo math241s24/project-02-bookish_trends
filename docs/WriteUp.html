@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Project 2 - Bookish Trends: Does the hype work?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Project 2</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proposal.html"> 
+<span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./presentation.html"> 
+<span class="menu-text">Presentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.qmd"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/math241s24/project-02"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#write-up" id="toc-write-up" class="nav-link active" data-scroll-target="#write-up"><strong>Write-up</strong></a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><strong>Introduction :</strong></a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><strong>Conclusion:</strong></a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bookish Trends: Does the hype work?</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<pre><code></code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tidyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'stringr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>amazontop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/amazontop - Sheet1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 100 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (4): book title, author, genre, url
+dbl (4): Rank, book price, rating, year of publication
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bookishdata_sm <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Bookish Data (Responses) Actual - sm.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 33 Columns: 9
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (2): Timestamp, Email Address
+dbl (7): sm_tok, sm_tube, sm_gram, sm_good, sm_red, sm_tumb, sm_oth
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>bookishdata_genre <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/bookishdata - genre1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+Rows: 69 Columns: 198
+── Column specification
+──────────────────────────────────────────────────────── Delimiter: "," chr
+(3): Timestamp, Email Address, Contemporary Fiction dbl (95): Fantasy, Science
+Fiction, Romance, Contemporary, Nonfiction, Myst... lgl (100): ...99, ...100,
+...101, ...102, ...103, ...104, ...105, ...106, .....
+ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+Specify the column types or set `show_col_types = FALSE` to quiet this message.
+• `Educational Material` -&gt; `Educational Material...68`
+• `Educational Material` -&gt; `Educational Material...71`
+• `` -&gt; `...99`
+• `` -&gt; `...100`
+• `` -&gt; `...101`
+• `` -&gt; `...102`
+• `` -&gt; `...103`
+• `` -&gt; `...104`
+• `` -&gt; `...105`
+• `` -&gt; `...106`
+• `` -&gt; `...107`
+• `` -&gt; `...108`
+• `` -&gt; `...109`
+• `` -&gt; `...110`
+• `` -&gt; `...111`
+• `` -&gt; `...112`
+• `` -&gt; `...113`
+• `` -&gt; `...114`
+• `` -&gt; `...115`
+• `` -&gt; `...116`
+• `` -&gt; `...117`
+• `` -&gt; `...118`
+• `` -&gt; `...119`
+• `` -&gt; `...120`
+• `` -&gt; `...121`
+• `` -&gt; `...122`
+• `` -&gt; `...123`
+• `` -&gt; `...124`
+• `` -&gt; `...125`
+• `` -&gt; `...126`
+• `` -&gt; `...127`
+• `` -&gt; `...128`
+• `` -&gt; `...129`
+• `` -&gt; `...130`
+• `` -&gt; `...131`
+• `` -&gt; `...132`
+• `` -&gt; `...133`
+• `` -&gt; `...134`
+• `` -&gt; `...135`
+• `` -&gt; `...136`
+• `` -&gt; `...137`
+• `` -&gt; `...138`
+• `` -&gt; `...139`
+• `` -&gt; `...140`
+• `` -&gt; `...141`
+• `` -&gt; `...142`
+• `` -&gt; `...143`
+• `` -&gt; `...144`
+• `` -&gt; `...145`
+• `` -&gt; `...146`
+• `` -&gt; `...147`
+• `` -&gt; `...148`
+• `` -&gt; `...149`
+• `` -&gt; `...150`
+• `` -&gt; `...151`
+• `` -&gt; `...152`
+• `` -&gt; `...153`
+• `` -&gt; `...154`
+• `` -&gt; `...155`
+• `` -&gt; `...156`
+• `` -&gt; `...157`
+• `` -&gt; `...158`
+• `` -&gt; `...159`
+• `` -&gt; `...160`
+• `` -&gt; `...161`
+• `` -&gt; `...162`
+• `` -&gt; `...163`
+• `` -&gt; `...164`
+• `` -&gt; `...165`
+• `` -&gt; `...166`
+• `` -&gt; `...167`
+• `` -&gt; `...168`
+• `` -&gt; `...169`
+• `` -&gt; `...170`
+• `` -&gt; `...171`
+• `` -&gt; `...172`
+• `` -&gt; `...173`
+• `` -&gt; `...174`
+• `` -&gt; `...175`
+• `` -&gt; `...176`
+• `` -&gt; `...177`
+• `` -&gt; `...178`
+• `` -&gt; `...179`
+• `` -&gt; `...180`
+• `` -&gt; `...181`
+• `` -&gt; `...182`
+• `` -&gt; `...183`
+• `` -&gt; `...184`
+• `` -&gt; `...185`
+• `` -&gt; `...186`
+• `` -&gt; `...187`
+• `` -&gt; `...188`
+• `` -&gt; `...189`
+• `` -&gt; `...190`
+• `` -&gt; `...191`
+• `` -&gt; `...192`
+• `` -&gt; `...193`
+• `` -&gt; `...194`
+• `` -&gt; `...195`
+• `` -&gt; `...196`
+• `` -&gt; `...197`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(bookishdata_genre)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>bookishdata_books <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/bookishdata - books.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 837 Columns: 101
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (2): Timestamp, Email Address
+dbl (99): Tom Lake: A Reese's Book Club Pick, Flash Cards: Sight Words, Haun...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(bookishdata_books)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="write-up" class="level1">
+<h1><strong>Write-up</strong></h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction :</strong></h2>
+<p>What does reading look like in 2024? Scroll enough on a social media platform and one might stumble on a young adult raving about their favorite book. They might be sharing they favorite book tropes or rating their recent reads. These online bookish spaces also allow for a different type of content: hauls. Creators going to stores and splurging on books that they never share reviews on. Their content becomes focused on the special editions of books rather than the substance inside them. Bookshelf tours rather than comprehensive ratings.</p>
+<p>I do not want to give the impression that I have an overall cynical view of online book spaces, I just spend a lot of free time on there. I see much of the same books, authors, tropes, and genre’s recommended over and over. In this era of consumption, I do wonder if the hype, the buzz and level of discussion of a book actually makes an impact?</p>
+<p>Through Kaggle (a data science competition platform and online community of data scientists and machine learning practitioners under Google LLC) I found a scrapped data frame made by a user. This was a data frame of Amazon’s top 100 bestselling books of 2023 made Ansh Tanwar. Some variables of note in this data set were the title, author, genre, (variable saved in a list separated by commas), book rating, and book ranking.</p>
+<p>All this was important data to have on hand, but what I really wanted was to compare this data to one a lot more difficult to calculate. I wanted to connect a book’s presence online to it’s rating or even it’s overall ranking on amazon. I decided that I would create a questionnaire and use input from those active on bookish social media to give books a presence rating. Small note, collecting data this way was an from using API’s directly from social media platforms. I did not have the appropriate credentials to request API usage or it would cost a fee I could not pay.</p>
+<p>This approach part of this write-up will tackle both the data-collection portion and what I decided to do with the data once I had the data.</p>
+<p><strong>Question 1:</strong></p>
+<p>How does a book’s/genre’s social media presence impact book sales/ratings?</p>
+<section id="approach-data-collection" class="level4">
+<h4 class="anchored" data-anchor-id="approach-data-collection"><strong>Approach (Data Collection):</strong></h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(bookishdata_sm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 33
+Columns: 9
+$ Timestamp       &lt;chr&gt; "4/8/2024 22:59:06", "4/10/2024 13:51:03", "4/10/2024 …
+$ `Email Address` &lt;chr&gt; "rons@reed.edu", "durkinm@reed.edu", "rkhediri@reed.ed…
+$ sm_tok          &lt;dbl&gt; 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, …
+$ sm_tube         &lt;dbl&gt; 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, …
+$ sm_gram         &lt;dbl&gt; 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, …
+$ sm_good         &lt;dbl&gt; 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, …
+$ sm_red          &lt;dbl&gt; 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, …
+$ sm_tumb         &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, …
+$ sm_oth          &lt;dbl&gt; 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …</code></pre>
+</div>
+</div>
+<p>When it came to the data collection portion of my project, I made the style of the questions with the intention of making the subsequent data frame as tidy as possible. The above data frame is just an example of how I collected data.</p>
+<p><img src="images/formpic.png" class="img-fluid" width="750"></p>
+<p>The above question shows the format of the entirety of my questionnaire. There would be a set number of possible responses an a variety of categories of a question. This way of asking actually made response collection relatively quick despite the 200+ questions. I would convert the responses to numerical variables as needed.</p>
+<p>If you would like to view the questionnaire from the perspective as one of the people I collected data from, here is the link to view this form: <a href="https://forms.gle/oqg772SjDWP5c41J6" class="uri">https://forms.gle/oqg772SjDWP5c41J6</a></p>
+<p>To give every individual user an ID, I did keep their email and time stamp of the response.</p>
+<p>As far as data collection goes, the avenues I was counting on to get eyes on my project were delayed to a student death on campus, so that aspect of my project was prolonged. I did use posters, student newsletters, and word of mouth to get as many responses as possible. I also had to offer 20 of my own dollars to get my interaction as well. After all of this I did have 33 responses, which was enough to continue my project.</p>
+<p>Why did I rely on Reed college students? Despite them being accessible to me, I also was looking for a demographic that would have associations on online book platforms. This type of person would have to be interested in reading as a hobby), but also have some sort of online proficiency. I believed that a younger demographic would capture that more as young adults are typically going to have a social media presence. Reedies also do have a strong capacity for reading in general. I believed targeting Reed college would garner results that represented my demographic fairly well, but also would give me enough responses to be able to learn something from the data.</p>
+<p>The methodology behind my questions was very much structured after the Amazon’s bestsellers list. Every single book in the Amazon’s Top 100 was asked about in terms of social media presence. I used a slightly different metric of measurement for sm_type and the other two major questions. sm_type I wanted more of a binary, I am active here or not, meanwhile for the other question I wanted more of a scale, since social media presence was the objective of the entire questionnaire.</p>
+<table class="table">
+<caption>Book Questionnaire Codebook</caption>
+<colgroup>
+<col style="width: 4%">
+<col style="width: 46%">
+<col style="width: 17%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable:</th>
+<th>Question:</th>
+<th>Response:</th>
+<th>Variants:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>smtype</td>
+<td>What online book communities are you active in (as a creator or viewer)?</td>
+<td><p>0: No, I’m not active in this community.</p>
+<p>1: Yes, I’m active in this community</p></td>
+<td><p>sm_tok= Tik-Tok(booktok)</p>
+<p>sm_tube=</p>
+<p>booktube(youtube)</p>
+<p>sm_gram=</p>
+<p>bookgram(booktube)</p>
+<p>sm_good=</p>
+<p>Goodreads</p>
+<p>sm_red= Reddit</p>
+<p>sm_tumb=Tumblr</p>
+<p>sm_oth= Other Book Centered Website/App</p></td>
+</tr>
+<tr class="even">
+<td>genre</td>
+<td>What kind of Social Media presence do the following categories, topics, or genres have on your book-related feed?</td>
+<td><p>0: No Social Media Presence</p>
+<p>1: Some Social Media Presence</p>
+<p>2: High Social Media Presence</p></td>
+<td><p>genre_(category, genre, topic name)</p>
+<p>Ex. genre_bib=Biblical Studies - Prophecy, Christian Theology - Eschatolog</p></td>
+</tr>
+<tr class="odd">
+<td>book</td>
+<td>What kind of Social Media presence do the following book/series have on your book-related feed?</td>
+<td><p>0: No Social Media Presence</p>
+<p>1: Some Social Media Presence</p>
+<p>2: High Social Media Presence</p></td>
+<td>booktitle by bookauthor</td>
+</tr>
+</tbody>
+</table>
+<p>Note: there was not present Codebook for the scrapped dataset.</p>
+<p>In the data frame from Kaggle, Author and book title were separated, but I opted to combine them in case someone filling out the questionnaire recognized one and not the other. This could help inform how they would answer the question and how they were measure social media presence. I also reverted this back after data collection. It was very important the genre and book titles completely matched the Amazon’s bestseller’s list because I wanted to merge them together to put “presence score” on a scatterplot with rating or ranking. This presence score would be collected from averaging all the responses of social media presence and putting it on a scale between 0-2. Anything between 0-1 would mean the book/genre in question has no/some social media presence, while between 1-2 would mean some social media presence and high social media presence.</p>
+<p>With the scrapped data I found it was not in a tidy format, so I had to do that work myself with genre. Interestingly I found, one of the authors was recorded as Unknown even though the page it was scrapped from had an author. The author was Ted Cruz, the Republican Governor of Texas known for being hyper-conservative. I do believe this data scientist probably tampered to omit their name, but kept their book on the list. I fixed this and also fixed some shifting I found between the rows and columns.</p>
+<p>The next part of my project was to effectively merge the scraped data and collected data to answer my project question.</p>
+<p><strong>Analysis (2-3 code blocks, 2 figures, text/code comments as needed):</strong></p>
+<p>Below is my Analysis in Terms of Book Genre:</p>
+<ul>
+<li><p>I made a table which gave me the genre’s that had the highest proportion of presence on the list.</p></li>
+<li><p>I made a visualization to easier conceptualize my findings.</p></li>
+<li><p>I merged the average social media presence score of genre and the proportion on the Amazon top 100.</p></li>
+<li><p>I plotted this on a scatter plot.</p></li>
+<li><p>I performed a linear regression analysis.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#The top 10 genre's present in Amazon's the Top 100</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>genre_tidy <span class="ot">&lt;-</span> <span class="fu">separate_rows</span>(amazontop, genre, <span class="at">sep =</span> <span class="st">",</span><span class="sc">\\</span><span class="st">s*"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>genre_counts <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">table</span>(genre_tidy<span class="sc">$</span>genre))</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(genre_counts) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"genre"</span>, <span class="st">"count"</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>genre_counts<span class="ot">&lt;-</span> genre_counts <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">proportion=</span> count<span class="sc">/</span> <span class="fu">sum</span>(count))</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>genre_counts <span class="ot">&lt;-</span> genre_counts <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(proportion))</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_head</span>(genre_counts, <span class="at">n=</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          genre count proportion
+1     Childrens    31 0.09393939
+2       Fiction    26 0.07878788
+3    Nonfiction    19 0.05757576
+4  Picture Book    19 0.05757576
+5       Fantasy    16 0.04848485
+6     Self Help    10 0.03030303
+7       Romance     9 0.02727273
+8       Animals     8 0.02424242
+9       Holiday     8 0.02424242
+10     Thriller     8 0.02424242</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#See top genre's</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>originalgenredistribution <span class="ot">&lt;-</span> genre_counts <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(count <span class="sc">&gt;</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(genre))</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>originalhisto <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(originalgenredistribution, <span class="fu">aes</span>(<span class="at">x =</span> genre, <span class="at">y =</span> count, <span class="at">fill =</span> count <span class="sc">&gt;</span> <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span>  </span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"FALSE"</span> <span class="ot">=</span> <span class="st">"#3182bd"</span>, <span class="st">"TRUE"</span> <span class="ot">=</span> <span class="st">"#de2d26"</span>)) <span class="sc">+</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"white"</span>)) <span class="sc">+</span> </span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Top genre's represented in Amazon's Top 100 bestselling books of 2023"</span>)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>originalhisto</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="WriteUp_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Merging Data</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>numeric_cols <span class="ot">&lt;-</span> <span class="fu">sapply</span>(bookishdata_genre, is.numeric)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Pivot the data frame</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>genre_averages <span class="ot">&lt;-</span> bookishdata_genre <span class="sc">%&gt;%</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">names</span>(bookishdata_genre)[numeric_cols], <span class="at">names_to =</span> <span class="st">"genre"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(genre) <span class="sc">%&gt;%</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">averagescore =</span> <span class="fu">mean</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">low =</span> <span class="fu">quantile</span>(value, <span class="fl">0.1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">high =</span> <span class="fu">quantile</span>(value, <span class="fl">0.9</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>merged_genre<span class="ot">&lt;-</span> <span class="fu">merge</span>(genre_averages, genre_counts, <span class="at">by =</span> <span class="st">"genre"</span>)</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="co"># View the merged dataset</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(merged_genre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                genre averagescore low high count  proportion
+1                              Action   0.84848485   0  2.0     2 0.006060606
+2                          Activities   0.24242424   0  1.0     1 0.003030303
+3                               Adult   1.18181818   0  2.0     5 0.015151515
+4                           Adventure   1.00000000   0  2.0     4 0.012121212
+5                            Alphabet   0.06060606   0  0.0     1 0.003030303
+6                             Animals   0.33333333   0  1.0     8 0.024242424
+7                                 Art   0.51515152   0  2.0     1 0.003030303
+8                           Audiobook   0.69696970   0  2.0     1 0.003030303
+9                       Autobiography   0.54545455   0  1.8     1 0.003030303
+10        Biblical Studies - Prophecy   0.12121212   0  0.0     1 0.003030303
+11                          Biography   0.30303030   0  1.0     2 0.006060606
+12                           Business   0.27272727   0  1.0     3 0.009090909
+13                    Cars and Trucks   0.15151515   0  0.0     1 0.003030303
+14                          Chick Lit   0.69696970   0  2.0     1 0.003030303
+15                          Childrens   0.24242424   0  1.0    31 0.093939394
+16                          Christmas   0.24242424   0  1.0     3 0.009090909
+17                             Colors   0.06060606   0  0.0     1 0.003030303
+18                       Contemporary   0.72727273   0  2.0     5 0.015151515
+19               Contemporary Romance   1.24242424   0  2.0     2 0.006060606
+20                          Cookbooks   0.42424242   0  1.0     1 0.003030303
+21                            Cooking   0.60606061   0  2.0     1 0.003030303
+22                           Counting   0.06060606   0  0.0     1 0.003030303
+23                             Crafts   0.27272727   0  1.0     1 0.003030303
+24                               Dark   0.60606061   0  2.0     2 0.006060606
+25                             Design   0.09090909   0  0.0     1 0.003030303
+26                          Dinosaurs   0.66666667   0  1.8     1 0.003030303
+27                            Dragons   0.72727273   0  2.0     2 0.006060606
+28                          Economics   0.33333333   0  1.0     1 0.003030303
+29                                Fae   0.81818182   0  2.0     1 0.003030303
+30                             Family   0.30303030   0  1.0     2 0.006060606
+31              Family Life - General   0.15151515   0  0.8     1 0.003030303
+32                            Fantasy   1.36363636   0  2.0    16 0.048484848
+33                            Fiction   1.33333333   0  2.0    26 0.078787879
+34                            Finance   0.54545455   0  2.0     1 0.003030303
+35                            Fitness   0.18181818   0  1.0     1 0.003030303
+36                              Games   0.33333333   0  1.0     1 0.003030303
+37                             Health   0.21212121   0  1.0     3 0.009090909
+38                       High Fantasy   1.36363636   0  2.0     2 0.006060606
+39                 Historical Fiction   0.75757576   0  1.8     3 0.009090909
+40                            History   0.39393939   0  1.0     2 0.006060606
+41                            Holiday   0.18181818   0  1.0     8 0.024242424
+42                             Horror   0.45454545   0  1.8     3 0.009090909
+43                              Humor   0.60606061   0  1.0     7 0.021212121
+44                             Israel   0.12121212   0  0.8     1 0.003030303
+45                            Judaism   0.12121212   0  0.8     1 0.003030303
+46                         Leadership   0.15151515   0  0.8     1 0.003030303
+47                     Legal Thriller   0.21212121   0  1.0     1 0.003030303
+48                           LGBTQIA+   1.24242424   0  2.0     1 0.003030303
+49                           Literary   0.96969697   0  2.0     2 0.006060606
+50                               Love   1.36363636   0  2.0     1 0.003030303
+51                              Magic   1.00000000   0  2.0     2 0.006060606
+52                            Medical   0.24242424   0  1.0     1 0.003030303
+53                             Memoir   0.57575758   0  1.8     3 0.009090909
+54                      Mental Health   0.45454545   0  1.0     3 0.009090909
+55                       Middle Grade   0.24242424   0  1.0     1 0.003030303
+56                              Money   0.30303030   0  1.0     1 0.003030303
+57                              Music   0.51515152   0  1.8     1 0.003030303
+58                            Mystery   0.87878788   0  2.0     6 0.018181818
+59                          Mythology   0.93939394   0  2.0     1 0.003030303
+60                          New Adult   0.90909091   0  2.0     2 0.006060606
+61                         Nonfiction   0.78787879   0  2.0    19 0.057575758
+62                             Number   0.06060606   0  0.0     1 0.003030303
+63                          Nutrition   0.12121212   0  0.8     1 0.003030303
+64               Personal Development   0.81818182   0  2.0     2 0.006060606
+65                   Personal Finance   0.18181818   0  1.0     1 0.003030303
+66                       Picture Book   0.21212121   0  1.0    19 0.057575758
+67                             Poetry   0.33333333   0  1.0     2 0.006060606
+68                           Politics   0.51515152   0  1.8     3 0.009090909
+69                         Psychology   0.39393939   0  1.8     5 0.015151515
+70                      Relationships   0.24242424   0  1.0     1 0.003030303
+71                           Religion   0.24242424   0  1.0     1 0.003030303
+72                            Romance   1.45454545   0  2.0     9 0.027272727
+73                            Science   0.54545455   0  2.0     3 0.009090909
+74                    Science Fiction   0.93939394   0  2.0     5 0.015151515
+75                          Self Help   0.54545455   0  1.8    10 0.030303030
+76                  Spiritual Warfare   0.21212121   0  1.0     1 0.003030303
+77                       Spirituality   0.30303030   0  1.0     1 0.003030303
+78                          Storytime   0.36363636   0  1.0     7 0.021212121
+79                           Suspense   0.51515152   0  1.8     1 0.003030303
+80                           Thriller   0.60606061   0  2.0     8 0.024242424
+81                         True Crime   0.54545455   0  2.0     1 0.003030303
+82                                War   0.48484848   0  1.0     3 0.009090909
+83                       Wild Animals   0.12121212   0  0.0     1 0.003030303
+84 World Literature - India - General   0.09090909   0  0.0     1 0.003030303
+85                            Writing   0.63636364   0  2.0     1 0.003030303
+86                        Young Adult   1.21212121   0  2.0     6 0.018181818</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(merged_genre, <span class="fu">aes</span>(<span class="at">x=</span>averagescore, <span class="at">y=</span>proportion)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">"Average Social Media presence Scale 0-2"</span>, <span class="at">y=</span> <span class="st">"Proportion of Amazon's Top 100"</span>, <span class="at">title=</span> <span class="st">"Bestselling Makeup by Genre and Social Media Presence Rating"</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="WriteUp_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>genremodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(averagescore <span class="sc">~</span> proportion, <span class="at">data =</span> merged_genre) </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(genremodel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = averagescore ~ proportion, data = merged_genre)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.74686 -0.26812 -0.05963  0.21673  0.88339 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  0.46328    0.04715   9.825  1.3e-15 ***
+proportion   5.59948    2.45321   2.283    0.025 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.3631 on 84 degrees of freedom
+Multiple R-squared:  0.0584,    Adjusted R-squared:  0.04719 
+F-statistic:  5.21 on 1 and 84 DF,  p-value: 0.02499</code></pre>
+</div>
+</div>
+<p>Below is my Analysis in Terms of Book itself:</p>
+<ul>
+<li><p>I merged the average social media presence score of a book and the overall ranking of a book.</p></li>
+<li><p>I plotted this on a scatter plot.</p></li>
+<li><p>I performed a linear regression analysis on the two variables.</p></li>
+<li><p>Repeat above steps with ranking.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>numeric_cols <span class="ot">&lt;-</span> <span class="fu">sapply</span>(bookishdata_books, is.numeric)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>book_averages <span class="ot">&lt;-</span> bookishdata_books <span class="sc">%&gt;%</span> </span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">names</span>(bookishdata_books)[numeric_cols], <span class="at">names_to =</span> <span class="st">"book title"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="st">`</span><span class="at">book title</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">averagescore =</span> <span class="fu">mean</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>merged_book<span class="ot">&lt;-</span> <span class="fu">merge</span>(book_averages, amazontop, <span class="at">by =</span> <span class="st">"book title"</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="co"># View the merged dataset</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(merged_book)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                                                                                      book title
+1                                                                      A Court of Mist and Fury (A Court of Thorns and Roses, 2)
+2                                                                   A Court of Thorns and Roses (A Court of Thorns and Roses, 1)
+3                                                                        A Court of Thorns and Roses Paperback Box Set (5 books)
+4                                                                     A Court of Wings and Ruin (A Court of Thorns and Roses, 3)
+5                                                                                                                  A Little Life
+6                                                                                           All the Light We Cannot See: A Novel
+7                                                      Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones
+8                                                                                       Brown Bear, Brown Bear, What Do You See?
+9                                                                                           Chicka Chicka Boom Boom (Board Book)
+10                                                                                     Demon Copperhead: A Pulitzer Prize Winner
+11                                                                                            Dirty Thirty (30) (Stephanie Plum)
+12                                                                                        Don't Let the Pigeon Drive the Sleigh!
+13                                                                                                                     Elon Musk
+14                                                                                                            Five Silly Turkeys
+15                                                                                                      Flash Cards: Sight Words
+16                                                                  Forever Strong: A New, Science-Based Strategy for Aging Well
+17                                                                                                 Fourth Wing (The Empyrean, 1)
+18                                                                         Friends, Lovers, and the Big Terrible Thing: A Memoir
+19                                                                                                                Goodnight Moon
+20                                       Goodnight, Goodnight Construction Site (Board Book for Toddlers, Children's Board Book)
+21                                            Harry Potter and the Prisoner of Azkaban (Harry Potter, Book 3) (MinaLima Edition)
+22                                                                                    Harry Potter Paperback Box Set (Books 1-7)
+23                                                                                                                       Hatchet
+24                                                                                         Haunting Adeline (Cat and Mouse Duet)
+25         Hello, Baby Animals: A Durable High-Contrast Black-and-White Board Book for Newborns and Babies (High-Contrast Books)
+26                                                                     Hidden Potential: The Science of Achieving Greater Things
+27                                                                                  House of Flame and Shadow (Crescent City, 3)
+28                                            How to Be the Love You Seek: Break Cycles, Find Peace, and Heal Your Relationships
+29                                                                                                       How to Catch a Dinosaur
+30                                                                                                       How to Catch a Reindeer
+31                                                                                                         How to Catch a Turkey
+32                                                                                                           How to Catch an Elf
+33                                                   How to Know a Person: The Art of Seeing Others Deeply and Being Deeply Seen
+34                                                                                               Hundred Years' War on Palestine
+35                                                                                   I Am Thankful: A Thanksgiving Book for Kids
+36             I Love You Like No Otter: A Funny and Sweet Animal Board Book for Babies and Toddlers this Christmas (Punderland)
+37                                                                                               I Love You to the Moon and Back
+38                                  I'm Dead, Now What?: Important Information About My Belongings, Business Affairs, and Wishes
+39                                                                                                  If Animals Kissed Good Night
+40 Interesting Facts For Curious Minds: 1572 Random But Mind-Blowing Facts About History, Science, Pop Culture And Everything In
+41                                                                                                  Iron Flame (The Empyrean, 2)
+42                                                             Israel: A Simple Guide to the Most Misunderstood Country on Earth
+43                                                                                                                  Just Because
+44                                                        Killers of the Flower Moon: The Osage Murders and the Birth of the FBI
+45                                                                                                 Lessons in Chemistry: A Novel
+46                                                              Little Blue Truck's Christmas: A Christmas Holiday Book for Kids
+47                                                                                                      Llama Llama Gives Thanks
+48                                                                                                              Love Comes First
+49                                                                                                           Moo, Baa, La La La!
+50                                                                          Murtagh: The World of Eragon (The Inheritance Cycle)
+51                                                       My First Library : Boxset of 10 Board Books for Kids (My First Book of)
+52                                                                                                             My Name Is Barbra
+53                                                                                     No Brainer (Diary of a Wimpy Kid Book 18)
+54                                                                                     Outlive: The Science and Art of Longevity
+55                         Paint by Sticker Kids: Christmas: Create 10 Pictures One Sticker at a Time! Includes Glitter Stickers
+56                                                                                             Paw Patrol Phonics: 12 Books in 1
+57                                      Percy Jackson and the Olympians: The Chalice of the Gods (Percy Jackson &amp; the Olympians)
+58                                                                                         Pookie's Thanksgiving (Little Pookie)
+59                                                                           Remarkably Bright Creatures: A Read with Jenna Pick
+60                                                                                            Resurrection Walk (Lincoln Lawyer)
+61                          Rich Dad Poor Dad: What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!
+62  School Zone - Multiplication 0-12 Flash Cards - Ages 8+, 3rd Grade, 4th Grade, Elementary Math, Multiplication Facts, Common
+63                                                                         Stocking Stuffer Mad Libs: World's Greatest Word Game
+64                                                                                  Taylor Swift: A Little Golden Book Biography
+65                                                                                                          The 48 Laws of Power
+66                                                      The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma
+67                                                                                                             The Christmas Fix
+68                                          The Complete Cookbook for Young Chefs: 100+ Recipes that You'll Love to Cook and Eat
+69                                                                                     The Covenant of Water (Oprah's Book Club)
+70                                                                                                                  The Coworker
+71                                                                                              The Creative Act: A Way of Being
+72                                                                                The Exchange: After The Firm (The Firm Series)
+73                                             The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)
+74                                                                          The Great Disappearance: 31 Ways to be Rapture Ready
+75                                                                                                                 The Housemaid
+76                                                             The Leaf Thief: (The Perfect Fall Book for Children and Toddlers)
+77                                                     The Psychology of Money: Timeless lessons on wealth, greed, and happiness
+78                                                                                    The Seven Husbands of Evelyn Hugo: A Novel
+79 The Shadow Work Journal 2nd Edition: a Guide to Integrate and Transcend Your Shadows: The Essential Guidebook for Shadow Work
+80                                                      The Shadow Work Journal: A Guide to Integrate and Transcend your Shadows
+81                                                                                                   The Very Hungry Caterpillar
+82                                                                             The Wager: A Tale of Shipwreck, Mutiny and Murder
+83                                                                                                               The Woman in Me
+84                                                                                              The Wonderful Things You Will Be
+85                                                                                                              The Wonky Donkey
+86                                                                                 There Was an Old Lady Who Swallowed a Turkey!
+87                                                                                         Things We Never Got Over (Knockemout)
+88                                                                                            Tom Lake: A Reese's Book Club Pick
+89                                                                                                                Turkey Trouble
+90                                                                             Unwoke: How to Defeat Cultural Marxism in America
+91                                                                                                                        Verity
+92                                                                                        Where's Bluey?: A Search-and-Find Book
+93                                                                                                                 Where's Spot?
+94                            World of Eric Carle, Around the Farm 30-Button Animal Sound Book - Great for First Words - PI Kids
+   averagescore Rank book price rating                                author
+1    1.06060606   72      12.79    4.8                         Sarah J. Maas
+2    1.30303030   23       8.89    4.6                         Sarah J. Maas
+3    1.33333333   47      48.77    4.8                         Sarah J. Maas
+4    1.09090909   88      11.56    4.8                         Sarah J. Maas
+5    0.45454545   24      11.83    4.5                      Hanya Yanagihara
+6    0.72727273   10      11.98    4.5                         Anthony Doerr
+7    0.27272727   13      13.79    4.8                           James Clear
+8    0.15151515   30       4.94    4.9                       Bill Martin Jr.
+9    0.15151515   56       4.32    4.9     Bill Martin Jr., John Archambault
+10   0.24242424   77      19.50    4.6                    Barbara Kingsolver
+11   0.03030303   66      20.98    4.7                       Janet Evanovich
+12   0.15151515   20      11.99    4.8                            Mo Willems
+13   0.09090909   61      20.99    4.7                       Walter Isaacson
+14   0.03030303   84       5.99    4.8                           Salina Yoon
+15   0.00000000   54       2.88    4.8                            Scholastic
+16   0.09090909   75      20.63    4.6                        Gabrielle Lyon
+17   0.81818182    6      16.99    4.8                        Rebecca Yarros
+18   0.36363636    4      23.99    4.4                         Matthew Perry
+19   0.30303030   44       5.36    4.9                   Margaret Wise Brown
+20   0.03030303   27       3.78    4.9                  Sherri Duskey Rinker
+21   1.00000000   90      25.97    4.9                          J.K. Rowling
+22   0.90909091   80      45.22    4.9                          J.K. Rowling
+23   0.18181818   97       5.14    4.7                          Gary Paulsen
+24   0.63636364   70      13.36    4.4                          H.D. Carlton
+25   0.03030303   69       4.73    4.9           duopress labs, Julissa Mora
+26   0.18181818   51      21.00    4.4                         Adam M. Grant
+27   0.87878788   25      18.48     NA                         Sarah J. Maas
+28   0.09090909   46      20.11     NA                         Nicole LePera
+29   0.06060606   50       4.66    4.8                          Adam Wallace
+30   0.03030303   36       5.99    4.8                        Alice Walstead
+31   0.00000000    5       5.65    4.8                          Adam Wallace
+32   0.00000000   67       6.94    4.8                          Adam Wallace
+33   0.18181818   34      19.89    4.5                          David Brooks
+34   0.45454545   42      12.99    4.6                        Rashid Khalidi
+35   0.03030303   45       7.99    4.7                            Sheri Wall
+36   0.15151515   55       5.37    4.9                          Rose Rossner
+37   0.30303030   40       4.76    4.9                       Amelia Hepworth
+38   0.09090909   99      12.99    4.6                    Peter Pauper Press
+39   0.09090909   82       4.19    4.8                     Ann Whitford Paul
+40   0.12121212   59      12.89    4.6                          Jordan Moore
+41   0.81818182    1      18.42    4.1                        Rebecca Yarros
+42   0.15151515   78      15.59    4.7                            Noa Tishby
+43   0.09090909   81      12.69    4.6                   Matthew McConaughey
+44   0.60606061    9       9.86    4.4                           David Grann
+45   0.60606061   17      15.37    4.6                         Bonnie Garmus
+46   0.06060606   43      11.20    4.8                        Alice Schertle
+47   0.12121212   63       5.67    4.7                          Anna Dewdney
+48   0.06060606   86      17.99     NA                          Emily Giffin
+49   0.03030303   91       3.69    4.9                        Sandra Boynton
+50   0.27272727   29      22.48    4.8                   Christopher Paolini
+51   0.03030303   74      16.74    4.6                         Not available
+52   0.33333333    3      31.50    4.5                      Barbra Streisand
+53   0.18181818    8       8.55    4.8                           Jeff Kinney
+54   0.09090909   41      16.99    4.7                           Peter Attia
+55   0.00000000   85       6.06    4.8                    Workman Publishing
+56   0.12121212   95       8.25    4.6                      Jennifer Liberts
+57   1.15151515   94      15.63    4.7                          Rick Riordan
+58   0.09090909   37       6.99    4.9                        Sandra Boynton
+59   0.27272727   79      15.99    4.6                       Shelby Van Pelt
+60   0.03030303   52      20.98    5.0                      Michael Connelly
+61   0.30303030   93       6.31    4.7                       Robert Kiyosaki
+62   0.00000000   68       2.78    4.7                School Zone Publishing
+63   0.03030303   14       2.79    4.8                           Leigh Olsen
+64   0.21212121   19       4.78    4.9                          Wendy Loggia
+65   0.24242424   15      13.82    4.7                         Robert Greene
+66   0.39393939   22       9.68    4.8                   Bessel van der Kolk
+67   0.03030303   53       9.49    4.6                            Lucy Score
+68   0.12121212   62       9.97    4.8            Americas Test Kitchen Kids
+69   0.15151515   65      16.79    4.6                      Abraham Verghese
+70   0.03030303   92       9.44    4.2                       Freida McFadden
+71   0.12121212   73      17.49    4.7                            Rick Rubin
+72   0.09090909   18      18.96    4.1                          John Grisham
+73   0.18181818   32       7.74    4.7                       Don Miguel Ruiz
+74   0.12121212   16      18.84    4.6                        David Jeremiah
+75   0.42424242   33       8.11    4.5                       Freida McFadden
+76   0.03030303   28      10.39    4.8                         Alice Hemming
+77   0.15151515   38      12.68    4.7                         Morgan Housel
+78   1.24242424   39       9.49    4.6                   Taylor Jenkins Reid
+79   0.15151515   89      18.46    4.7                         Keila Shaheen
+80   0.03030303   58      17.28    4.6                         Keila Shaheen
+81   0.51515152   35       5.90    4.9                            Eric Carle
+82   0.09090909   98      15.30    4.5                           David Grann
+83   0.39393939    2      20.93    4.5                        Britney Spears
+84   0.12121212   49       9.40    4.9                 Emily Winfield Martin
+85   0.00000000  100       5.28    4.8                           Craig Smith
+86   0.09090909   60       6.28    4.8                      Lucille Colandro
+87   0.18181818   83       8.93    4.5                            Lucy Score
+88   0.12121212   64      15.33    4.3                          Ann Patchett
+89   0.06060606   21       8.79    4.8                         Wendi Silvano
+90   0.18181818    7      27.43    4.3                              Ted Cruz
+91   0.69696970   71      10.98    4.6                        Colleen Hoover
+92   0.12121212   48       6.93    4.8      Penguin Young Readers Licenses (
+93   0.03030303   76       4.97    4.9                             Eric Hill
+94   0.00000000   26       9.43    4.8 Editors of Publications International
+   year of publication
+1                 2016
+2                 2015
+3                 2021
+4                 2017
+5                 2015
+6                 2014
+7                 2018
+8                 1967
+9                 1989
+10                2022
+11                2021
+12                2023
+13                2023
+14                2005
+15                2018
+16                2023
+17                2023
+18                2023
+19                1947
+20                2011
+21                1999
+22                2014
+23                1987
+24                2021
+25                2016
+26                2023
+27                2023
+28                2023
+29                2019
+30                1969
+31                2018
+32                2016
+33                2022
+34                2019
+35                2020
+36                2020
+37                2017
+38                2015
+39                2008
+40                2022
+41                2023
+42                2021
+43                2023
+44                2017
+45                2022
+46                2014
+47                2017
+48                2016
+49                1982
+50                2023
+51                2018
+52                2023
+53                2023
+54                2023
+55                2019
+56                2015
+57                2023
+58                2022
+59                2024
+60                2023
+61                1997
+62                1994
+63                2018
+64                2023
+65                1998
+66                2014
+67                2017
+68                2018
+69                2023
+70                2023
+71                2023
+72                2023
+73                2011
+74                2023
+75                1997
+76                2021
+77                2022
+78                2020
+79                2023
+80                2021
+81                2023
+82                2023
+83                2023
+84                2015
+85                2009
+86                2016
+87                2022
+88                2023
+89                2009
+90                2023
+91                2018
+92                2022
+93                1980
+94                2013
+                                                                                   genre
+1                                      Fantasy, Romance, Young Adult, New Adult, Fiction
+2                                 Fantasy, Romance, Young Adult, Fiction, New Adult, Fae
+3                                                                       Fantasy, Romance
+4                                                                                Fantasy
+5                Fiction, Contemporary, LGBTQIA+, Literary Fiction, Adult, Mental Health
+6                                                                     Historical Fiction
+7                                                           Self-improvement, Nonfiction
+8                                                     Picture Book, Colors, Wild Animals
+9                                                                      Fiction, Alphabet
+10                                                                               Fiction
+11                         Dark, Thriller, Fantasy, Adult, Contemporary, Mystery, Horror
+12                  Picture Book, Christmas, Holiday, Humor, Childrens, Fiction, Animals
+13                                           Biography, Nonfiction, Business, Technology
+14                Picture Book, Childrens, Holiday, Storytime, Counting, Animals, Number
+15                                                       Educational Material, Childrens
+16                            Health, Nonfiction, Nutrition, Fitness, Self Help, Science
+17                                                                               Fantasy
+18                                                                                Memoir
+19                                                                 Childrens, literature
+20                                                         Picture Book, Cars and Trucks
+21                                                                               Fantasy
+22                              Childrens, Young Adult, Fantasy, Science Fiction, Horror
+23                                                Young Adult, Adventure, survival story
+24                         Dark, Thriller, Fantasy, Adult, Contemporary, Mystery, Horror
+25                                                      Childrens, Picture Book, Animals
+26         Nonfiction, Self Help, Psychology, Business, Leadership, Personal Development
+27 Fantasy, Dragons, Young Adult, Fiction, High Fantasy, Magic, Science Fiction, Fantasy
+28 Self Help, Nonfiction, Mental Health, Psychology, Personal Development, Relationships
+29              Picture Book, Dinosaurs, Childrens, Fiction, Storytime, Fantasy, Animals
+30                                                                 Childrens, literature
+31                                                                    Childrens, Fiction
+32                  Christmas, Picture Book, Holiday, Childrens, Fantasy, Humor, Fiction
+33                                                                            Nonfiction
+34                                                    History, Nonfiction, Politics, War
+35                                                               Picture Book, Childrens
+36                        Picture Book, Animals, Childrens, Fiction, Love, Family, Humor
+37                                                                 Childrens, literature
+38                                                                            Nonfiction
+39                  Picture Book, Childrens, Animals, Fiction, Family, Storytime, Poetry
+40                                                                            Nonfiction
+41                                                                       Fantasy Romance
+42                              Nonfiction, History, Politics, Israel, Judaism, Religion
+43                                                      Picture Book, Childrens, Fiction
+44                                                                Nonfiction, True Crime
+45                                                           Fiction, Historical Fiction
+46                                                                 Childrens, literature
+47                               Picture Book, Childrens, Holiday, Animals, Kids Fiction
+48                       Fiction, Romance, Contemporary, Audiobook, Adult, Adult Fiction
+49                                                    Childrens Literature, Picture Book
+50 Fantasy, Dragons, Young Adult, Fiction, High Fantasy, Magic, Science Fiction, Fantasy
+51                                                                             Childrens
+52                                                                         Autobiography
+53                                                                   Humor, Middle Grade
+54                                                Health, Nonfiction, Science, Self Help
+55                                                                  Childrens Literature
+56                                                                             Childrens
+57                                                         Fantasy, Adventure, Mythology
+58                                                      Picture Book, Childrens, Holiday
+59                                                                               Fiction
+60                           Fiction, Mystery, Thriller, Suspense, Crime, Legal Thriller
+61                                                                      Personal Finance
+62                                                                  Educational Material
+63                                                          Childrens, Storytime,Fiction
+64                                                               Picture Book, Biography
+65                                                                            Nonfiction
+66                     Nonfiction, Psychology, Self Help, Mental Health, Health, Science
+67        Christmas, Romance, Holiday, Contemporary Romance, Contemporary Fiction, Humor
+68                                                                              Cookbook
+69                                                                      Fiction, Mystery
+70                                                                     Thriller, Mystery
+71                        Nonfiction, Art, Music, Philosophy, Self Help, Writing, Design
+72                                                        Literary, Thrillers - Suspense
+73                                              Spirituality, Self Help, personal growth
+74      Spiritual Warfare, Biblical Studies - Prophecy, Christian Theology - Eschatology
+75                                                           Thriller, mystery, suspense
+76                                                                             Childrens
+77                Finance, Nonfiction, Psychology, Business, Self Help, Money, Economics
+78                                                                    Historical Fiction
+79                                                                             Self Help
+80                                                                 Self Help, Psychology
+81                                                                 Childrens, literature
+82                                                                            Nonfiction
+83                                                                                Memoir
+84                                              Picture Book, Childrens, Fiction, Poetry
+85                                                               Childrens, Picture Book
+86                           Picture Book, Holiday, Childrens, Fiction, Storytime, Humor
+87                Romance, Contemporary, Contemporary Romance, Fiction, Adult, Chick Lit
+88          Literary, Medical, Family Life - General, World Literature - India - General
+89                  Picture Book, Childrens, Holiday, Animals, Humor, Storytime, Fiction
+90                                                                  Nonfiction, Politics
+91                                                   Thriller, Romance, Mystery, Fiction
+92                                                          Childrens, Storytime,Fiction
+93                                                                             Childrens
+94                                                  Childrens, Activities, Crafts, Games
+                                                                                                                              url
+1                       amazon.com/Court-Mist-Fury-Thorns-Roses/dp/1635575583/ref=zg_bs_g_books_sccl_22/142-7825522-0098658?psc=1
+2                      amazon.com/Court-Thorns-Roses-Sarah-Maas/dp/1635575567/ref=zg_bs_g_books_sccl_23/143-9831347-1043253?psc=1
+3                 amazon.com/Court-Thorns-Roses-Paperback-books/dp/1639730192/ref=zg_bs_g_books_sccl_47/143-9831347-1043253?psc=1
+4                      amazon.com/Court-Wings-Ruin-Thorns-Roses/dp/1635575605/ref=zg_bs_g_books_sccl_88/142-7825522-0098658?psc=1
+5                       amazon.com/Little-Life-Hanya-Yanagihara/dp/0804172706/ref=zg_bs_g_books_sccl_24/143-9831347-1043253?psc=1
+6                            amazon.com/All-Light-We-Cannot-See/dp/1501173219/ref=zg_bs_g_books_sccl_10/143-9831347-1043253?psc=1
+7                   amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299/ref=zg_bs_g_books_sccl_13/143-9831347-1043253?psc=1
+8                            amazon.com/Brown-Bear-What-You-See/dp/0805047905/ref=zg_bs_g_books_sccl_30/143-9831347-1043253?psc=1
+9                              amazon.com/Chicka-Boom-Board-Book/dp/1442450703/ref=zg_bs_g_books_sccl_6/142-7825522-0098658?psc=1
+10         amazon.com/Demon-Copperhead-Novel-Barbara-Kingsolver/dp/0063251922/ref=zg_bs_g_books_sccl_27/142-7825522-0098658?psc=1
+11                    amazon.com/Dirty-Thirty-30-Stephanie-Plum/dp/1668003090/ref=zg_bs_g_books_sccl_16/142-7825522-0098658?psc=1
+12                      amazon.com/Dont-Let-Pigeon-Drive-Sleigh/dp/1454952776/ref=zg_bs_g_books_sccl_20/143-9831347-1043253?psc=1
+13                         amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281/ref=zg_bs_g_books_sccl_11/142-7825522-0098658?psc=1
+14                    amazon.com/Five-Silly-Turkeys-Salina-Yoon/dp/0843114169/ref=zg_bs_g_books_sccl_84/142-7825522-0098658?psc=1
+15           amazon.com/Flash-Cards-Scholastic-Teacher-Resources/dp/1338233580/ref=zg_bs_g_books_sccl_4/142-7825522-0098658?psc=1
+16       amazon.com/Forever-Strong-Science-Based-Strategy-Aging/dp/1668007878/ref=zg_bs_g_books_sccl_25/142-7825522-0098658?psc=1
+17                amazon.com/Fourth-Wing-Empyrean-Rebecca-Yarros/dp/1649374046/ref=zg_bs_g_books_sccl_6/143-9831347-1043253?psc=1
+18                  amazon.com/Friends-Lovers-Big-Terrible-Thing/dp/1250866448/ref=zg_bs_g_books_sccl_4/143-9831347-1043253?psc=1
+19                amazon.com/Goodnight-Moon-Margaret-Wise-Brown/dp/0694003611/ref=zg_bs_g_books_sccl_44/143-9831347-1043253?psc=1
+20       amazon.com/Goodnight-Construction-Sherri-Duskey-Rinker/dp/1452111731/ref=zg_bs_g_books_sccl_27/143-9831347-1043253?psc=1
+21            amazon.com/Harry-Potter-Prisoner-Azkaban-MinaLima/dp/1338815288/ref=zg_bs_g_books_sccl_90/142-7825522-0098658?psc=1
+22                  amazon.com/Harry-Potter-Paperback-Box-Books/dp/0545162076/ref=zg_bs_g_books_sccl_30/142-7825522-0098658?psc=1
+23                              amazon.com/Hatchet-Gary-Paulsen/dp/1416936475/ref=zg_bs_g_books_sccl_97/142-7825522-0098658?psc=1
+24                   amazon.com/Haunting-Adeline-Cat-Mouse-Duet/dp/B09CGGV8DX/ref=zg_bs_g_books_sccl_20/142-7825522-0098658?psc=1
+25             amazon.com/Hello-Baby-Animals-High-Contrast-Book/dp/1938093682/ref=zg_bs_g_books_sccl_19/142-7825522-0098658?psc=1
+26         amazon.com/Hidden-Potential-Science-Achieving-Greater/dp/0593653149/ref=zg_bs_g_books_sccl_1/142-7825522-0098658?psc=1
+27                  amazon.com/House-Flame-Shadow-Crescent-City/dp/1635574102/ref=zg_bs_g_books_sccl_25/143-9831347-1043253?psc=1
+28                   amazon.com/How-Love-You-Seek-Relationships/dp/0063267748/ref=zg_bs_g_books_sccl_46/143-9831347-1043253?psc=1
+29                   amazon.com/How-Catch-Dinosaur-Adam-Wallace/dp/1492680524/ref=zg_bs_g_books_sccl_50/143-9831347-1043253?psc=1
+30                 amazon.com/How-Catch-Reindeer-Alice-Walstead/dp/1728276136/ref=zg_bs_g_books_sccl_36/143-9831347-1043253?psc=1
+31                      amazon.com/How-Catch-Turkey-Adam-Wallace/dp/1492664359/ref=zg_bs_g_books_sccl_5/143-9831347-1043253?psc=1
+32                        amazon.com/How-Catch-Elf-Adam-Wallace/dp/1492646318/ref=zg_bs_g_books_sccl_17/142-7825522-0098658?psc=1
+33                     amazon.com/How-Know-Person-Seeing-Others/dp/059323006X/ref=zg_bs_g_books_sccl_34/143-9831347-1043253?psc=1
+34           amazon.com/Hundred-Years-War-Palestine-Colonialism/dp/1250787653/ref=zg_bs_g_books_sccl_42/143-9831347-1043253?psc=1
+35                amazon.com/Am-Thankful-Thanksgiving-Book-Kids/dp/1646115538/ref=zg_bs_g_books_sccl_45/143-9831347-1043253?psc=1
+36                             amazon.com/Love-You-Like-No-Otter/dp/1728213746/ref=zg_bs_g_books_sccl_5/142-7825522-0098658?psc=1
+37                              amazon.com/I-Love-You-Moon-Back/dp/1589255518/ref=zg_bs_g_books_sccl_40/143-9831347-1043253?psc=1
+38 amazon.com/Important-Information-Belongings-Business-Affairs/dp/1441317996/ref=zg_bs_g_books_sccl_99/142-7825522-0098658?psc=1
+39                      amazon.com/If-Animals-Kissed-Good-Night/dp/0374300216/ref=zg_bs_g_books_sccl_82/142-7825522-0098658?psc=1
+40       amazon.com/Interesting-Facts-Curious-Minds-Mind-Blowing/dp/B0B6XFT4RH/ref=zg_bs_g_books_sccl_9/142-7825522-0098658?psc=1
+41                 amazon.com/Iron-Flame-Empyrean-Rebecca-Yarros/dp/1649374178/ref=zg_bs_g_books_sccl_1/143-9831347-1043253?psc=1
+42         amazon.com/Israel-Simple-Guide-Misunderstood-Country/dp/1982144947/ref=zg_bs_g_books_sccl_28/142-7825522-0098658?psc=1
+43                  amazon.com/Just-Because-Matthew-McConaughey/dp/0593622030/ref=zg_bs_g_books_sccl_81/142-7825522-0098658?psc=1
+44                  amazon.com/Killers-Flower-Moon-Osage-Murders/dp/0307742482/ref=zg_bs_g_books_sccl_9/143-9831347-1043253?psc=1
+45             amazon.com/Lessons-Chemistry-Novel-Bonnie-Garmus/dp/038554734X/ref=zg_bs_g_books_sccl_17/143-9831347-1043253?psc=1
+46            amazon.com/Little-Trucks-Christmas-Alice-Schertle/dp/0544320417/ref=zg_bs_g_books_sccl_43/143-9831347-1043253?psc=1
+47                   amazon.com/Llama-Gives-Thanks-Anna-Dewdney/dp/110199715X/ref=zg_bs_g_books_sccl_13/142-7825522-0098658?psc=1
+48                      amazon.com/Love-Comes-First-Jenna-Hager/dp/0316525022/ref=zg_bs_g_books_sccl_86/142-7825522-0098658?psc=1
+49                            amazon.com/Moo-Baa-Sandra-Boynton/dp/067144901X/ref=zg_bs_g_books_sccl_91/142-7825522-0098658?psc=1
+50            amazon.com/Murtagh-World-Eragon-Inheritance-Cycle/dp/0593650867/ref=zg_bs_g_books_sccl_29/143-9831347-1043253?psc=1
+51                     amazon.com/My-First-Library-Boxset-Board/dp/9387779262/ref=zg_bs_g_books_sccl_24/142-7825522-0098658?psc=1
+52                           amazon.com/My-Name-Barbra-Streisand/dp/0525429522/ref=zg_bs_g_books_sccl_3/143-9831347-1043253?psc=1
+53                       amazon.com/Brainer-Diary-Wimpy-Kid-Book/dp/1419766945/ref=zg_bs_g_books_sccl_8/143-9831347-1043253?psc=1
+54                  amazon.com/Outlive-Longevity-Peter-Attia-MD/dp/0593236599/ref=zg_bs_g_books_sccl_41/143-9831347-1043253?psc=1
+55             amazon.com/Paint-Sticker-Kids-Workman-Publishing/dp/152350675X/ref=zg_bs_g_books_sccl_85/142-7825522-0098658?psc=1
+56                  amazon.com/Patrol-Phonics-Step-into-Reading/dp/0553508784/ref=zg_bs_g_books_sccl_95/142-7825522-0098658?psc=1
+57              amazon.com/Percy-Jackson-Olympians-Chalice-Gods/dp/1368098177/ref=zg_bs_g_books_sccl_94/142-7825522-0098658?psc=1
+58        amazon.com/Pookies-Thanksgiving-Little-Pookie-Boynton/dp/166592263X/ref=zg_bs_g_books_sccl_37/143-9831347-1043253?psc=1
+59           amazon.com/Remarkably-Bright-Creatures-Shelby-Pelt/dp/0063204150/ref=zg_bs_g_books_sccl_29/142-7825522-0098658?psc=1
+60                 amazon.com/Resurrection-Walk-Michael-Connelly/dp/0316563765/ref=zg_bs_g_books_sccl_2/142-7825522-0098658?psc=1
+61                        amazon.com/Rich-Dad-Poor-Teach-Middle/dp/1612681131/ref=zg_bs_g_books_sccl_93/142-7825522-0098658?psc=1
+62   amazon.com/School-Zone-Multiplication-Grades-Concentration/dp/0938256939/ref=zg_bs_g_books_sccl_18/142-7825522-0098658?psc=1
+63                 amazon.com/Stocking-Stuffer-Libs-Leigh-Olsen/dp/1524788139/ref=zg_bs_g_books_sccl_14/143-9831347-1043253?psc=1
+64              amazon.com/Taylor-Swift-Little-Golden-Biography/dp/0593566718/ref=zg_bs_g_books_sccl_19/143-9831347-1043253?psc=1
+65                       amazon.com/48-Laws-Power-Robert-Greene/dp/0140280197/ref=zg_bs_g_books_sccl_15/143-9831347-1043253?psc=1
+66                   amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748/ref=zg_bs_g_books_sccl_22/143-9831347-1043253?psc=1
+67                           amazon.com/Christmas-Fix-Lucy-Score/dp/1728295149/ref=zg_bs_g_books_sccl_3/142-7825522-0098658?psc=1
+68                     amazon.com/Complete-Cookbook-Young-Chefs/dp/1492670022/ref=zg_bs_g_books_sccl_12/142-7825522-0098658?psc=1
+69                   amazon.com/Covenant-Water-Abraham-Verghese/dp/0802162177/ref=zg_bs_g_books_sccl_15/142-7825522-0098658?psc=1
+70                          amazon.com/Coworker-Freida-McFadden/dp/172829620X/ref=zg_bs_g_books_sccl_92/142-7825522-0098658?psc=1
+71                            amazon.com/Creative-Act-Way-Being/dp/0593652886/ref=zg_bs_g_books_sccl_23/142-7825522-0098658?psc=1
+72                               amazon.com/Exchange-After-Firm/dp/0385548958/ref=zg_bs_g_books_sccl_18/143-9831347-1043253?psc=1
+73        amazon.com/Four-Agreements-Practical-Personal-Freedom/dp/1878424319/ref=zg_bs_g_books_sccl_32/143-9831347-1043253?psc=1
+74            amazon.com/Great-Disappearance-Ways-Rapture-Ready/dp/078525224X/ref=zg_bs_g_books_sccl_16/143-9831347-1043253?psc=1
+75                         amazon.com/Housemaid-Freida-McFadden/dp/1538742578/ref=zg_bs_g_books_sccl_33/143-9831347-1043253?psc=1
+76                          amazon.com/Leaf-Thief-Alice-Hemming/dp/1728235200/ref=zg_bs_g_books_sccl_28/143-9831347-1043253?psc=1
+77       amazon.com/Psychology-Money-Timeless-lessons-happiness/dp/0857197681/ref=zg_bs_g_books_sccl_38/143-9831347-1043253?psc=1
+78                  amazon.com/Seven-Husbands-Evelyn-Hugo-Novel/dp/1501161938/ref=zg_bs_g_books_sccl_39/143-9831347-1043253?psc=1
+79                 amazon.com/Shadow-Work-Journal-2nd-Integrate/dp/B0BW31X61X/ref=zg_bs_g_books_sccl_89/142-7825522-0098658?psc=1
+80            amazon.com/Shadow-Work-Journal-Integrate-Transcend/dp/B09KN2QCML/ref=zg_bs_g_books_sccl_8/142-7825522-0098658?psc=1
+81                amazon.com/Very-Hungry-Caterpillar-Eric-Carle/dp/0399226907/ref=zg_bs_g_books_sccl_35/143-9831347-1043253?psc=1
+82                amazon.com/Wager-Tale-Shipwreck-Mutiny-Murder/dp/0385534264/ref=zg_bs_g_books_sccl_98/142-7825522-0098658?psc=1
+83                            amazon.com/Woman-Me-Britney-Spears/dp/1668009048/ref=zg_bs_g_books_sccl_2/143-9831347-1043253?psc=1
+84                      amazon.com/Wonderful-Things-You-Will-Be/dp/0385376715/ref=zg_bs_g_books_sccl_49/143-9831347-1043253?psc=1
+85                         amazon.com/Wonky-Donkey-Craig-Smith/dp/0545261244/ref=zg_bs_g_books_sccl_100/142-7825522-0098658?psc=1
+86                   amazon.com/There-Was-Lady-Swallowed-Turkey/dp/0545931908/ref=zg_bs_g_books_sccl_10/142-7825522-0098658?psc=1
+87                          amazon.com/Things-We-Never-Got-Over/dp/194563183X/ref=zg_bs_g_books_sccl_83/142-7825522-0098658?psc=1
+88                       amazon.com/Tom-Lake-Novel-Ann-Patchett/dp/006332752X/ref=zg_bs_g_books_sccl_14/142-7825522-0098658?psc=1
+89                      amazon.com/Turkey-Trouble-Wendi-Silvano/dp/0761455299/ref=zg_bs_g_books_sccl_21/143-9831347-1043253?psc=1
+90             amazon.com/Unwoke-Defeat-Cultural-Marxism-America/dp/1684513626/ref=zg_bs_g_books_sccl_7/143-9831347-1043253?psc=1
+91                             amazon.com/Verity-Colleen-Hoover/dp/1538724731/ref=zg_bs_g_books_sccl_21/142-7825522-0098658?psc=1
+92                     amazon.com/Wheres-Bluey-Search-Find-Book/dp/0593385691/ref=zg_bs_g_books_sccl_48/143-9831347-1043253?psc=1
+93                             amazon.com/Wheres-Spot-Eric-Hill/dp/0399240462/ref=zg_bs_g_books_sccl_26/142-7825522-0098658?psc=1
+94                     amazon.com/World-Carle-Around-Play-Sound/dp/1450805752/ref=zg_bs_g_books_sccl_26/143-9831347-1043253?psc=1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(merged_book, <span class="fu">aes</span>(<span class="at">x=</span>averagescore, <span class="at">y=</span>rating)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title=</span> <span class="st">"Average Social Media Score by Rating"</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"blue"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 3 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 3 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="WriteUp_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>ratemodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(rating <span class="sc">~</span> averagescore, <span class="at">data =</span> merged_book)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ratemodel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = rating ~ averagescore, data = merged_book)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.59895 -0.09803  0.00655  0.10930  0.29738 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   4.70445    0.02516  186.96   &lt;2e-16 ***
+averagescore -0.06049    0.05872   -1.03    0.306    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1848 on 89 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.01178,   Adjusted R-squared:  0.0006791 
+F-statistic: 1.061 on 1 and 89 DF,  p-value: 0.3057</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(merged_book, <span class="fu">aes</span>(<span class="at">x=</span> averagescore, <span class="at">y=</span>Rank)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="st">"Average Social Media Score by Ranking"</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"blue"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="WriteUp_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>bookrankcor <span class="ot">&lt;-</span> <span class="fu">cor</span>(merged_book<span class="sc">$</span>averagescore, merged_book<span class="sc">$</span>Rank)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the correlation coefficient</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bookrankcor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.1201202</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>rankmodel <span class="ot">&lt;-</span> <span class="fu">lm</span>(Rank <span class="sc">~</span> averagescore, <span class="at">data =</span> merged_book)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(rankmodel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Rank ~ averagescore, data = merged_book)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-48.441 -24.031  -0.846  24.348  52.447 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)    53.441      3.837  13.927   &lt;2e-16 ***
+averagescore  -10.324      8.895  -1.161    0.249    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 28.62 on 92 degrees of freedom
+Multiple R-squared:  0.01443,   Adjusted R-squared:  0.003716 
+F-statistic: 1.347 on 1 and 92 DF,  p-value: 0.2488</code></pre>
+</div>
+</div>
+</section>
+<section id="discussion" class="level4">
+<h4 class="anchored" data-anchor-id="discussion"><strong>Discussion:</strong></h4>
+<p>Overall after of all this, I did not really find a lot of tangible evidence of a connection between social media presence and book success (whether critically or through sales). I did however find a connection by genre. There was the statically significant correlation being social media presence and genre. Genre was calculated with how frequent it appeared on the Amazon’s bestsellers list. The null in this instance was that there is no correlation between social media presence and proportion of amazon’s bestselling list. Since, the p-value was roughly .025, means that I must reject the null and the alternative hypothesis is true. There is a correlation between social media presence and a genre’s proportion of amazon’s bestselling list. The frequency a genre a spoken about online increases the likelihood that genre will emerge in top book sales.</p>
+<p>However a lot of these results can just aid themselves to the truth that some genre’s are just more popular than others. Social media may not be making these genre’s gain success in sales, but rather the genre themselves just garner more engagement.</p>
+<p>I also cannot ignore the possibility for bias by those who self selected to partake in the questionnaire. Those who took this survey might have heightened or exaggerated opinions about books and their presence online. Also this questionnaire was exclusive to Reed College students and that might be a confounding variable as well. I can not apply the results of this questionnaire to the whole population on bookish online spaces, just those who also attend Reed college.</p>
+<p>I will also not how I dropped my focus on social media. It was interesting to glean the results of what online spaces were most present in my questionnaire, but it had no impact overall on my central question, so I dropped it from my write up.</p>
+<p>I underestimated the popularity of children’s books, whose demographic are not on online book platforms. Children and their parents may learn about new books from word of mouth and not necessarily by engaging online. There can be some overlap between parents and book centered social media, but not much.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion"><strong>Conclusion:</strong></h2>
+<p>I did a lot of work for this project to come to the conclusion that there really is not any strong evidence of a connection between Social media and Book sales/rating. I did multiple regession analsyis tests and visualizations based on both rating and ranking on Amazon’s Bestseller’s List and if anything the weak correlations were negative.</p>
+<p>I do not believe that this project was in vain. When I was somewhat fruitless in my project, I did consider changing the course of my project to do more predictive modeling based one the type of social media people were active on or how frequent they were online. Just because I did not find a strong correlation does not mean that this project was a waste. In fact, I would argue the opposite. I see the results as somewhat hopeful. Readers are not mindless who will buy whatever is advertised. The hype surrounding books is not enough to cause a book to skyrocket in sales. Substance is also considered. Overall this project showed that the growing “aesthetic of reading” does not trump the craft of writing.</p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

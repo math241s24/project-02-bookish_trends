@@ -9,8 +9,8 @@ website:
       - icon: github
         href: https://github.com/math241s24/project-02
     left:
-      - text: Project
-        href: index.qmd
+      - text: "Project"
+        href: WriteUp.qmd
       - text: "Proposal"
         href: proposal.qmd
       - text: "Presentation"

@@ -1,0 +1,14 @@
+{
+  "hash": "bae2adf9df23fa82053906be151fdd06",
+  "result": {
+    "markdown": "this is where I will make a visualization demonstrating the correlation of ranking and hype score",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -19,9 +19,12 @@ library(tidyverse)
 ```{r load-data}
 #| label: load-data
 #| message: false
+
+library(tidyverse)
+library(dplyr)
 library(readr)
-Top_100_Trending_Books <- read_csv("~/GitHub/project-02-bookish_trends/data/Top-100 Trending Books.csv")
-View(Top_100_Trending_Books)
+Top_100_Trending_Books <- read_csv("data/Top-100 Trending Books.csv")
+# View(Top_100_Trending_Books)
 
 ```
 

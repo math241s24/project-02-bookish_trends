@@ -15,14 +15,14 @@ library(tidyr)
 ```
 
 ```{r}
-amazontop <- read_csv("~/GitHub/project-02-bookish_trends/data/amazontop - Sheet1.csv")
+amazontop <- read_csv("data/amazontop - Sheet1.csv")
 
-bookishdata_sm <- read_csv("~/GitHub/project-02-bookish_trends/data/Bookish Data (Responses) Actual - sm.csv")
+bookishdata_sm <- read_csv("data/Bookish Data (Responses) Actual - sm.csv")
   
-bookishdata_genre <- read_csv("~/GitHub/project-02-bookish_trends/data/bookishdata - genre1.csv")
+bookishdata_genre <- read_csv("data/bookishdata - genre1.csv")
 View(bookishdata_genre)
 
-bookishdata_books <- read_csv("~/GitHub/project-02-bookish_trends/data/bookishdata - books.csv")
+bookishdata_books <- read_csv("data/bookishdata - books.csv")
 View(bookishdata_books)
 ```
 
