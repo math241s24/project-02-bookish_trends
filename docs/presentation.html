@@ -488,7 +488,28 @@ Maya Gutierrez
 </div>
 </div>
 </div>
-<p><code>{r. echo= FALSE} genremodel &lt;- lm(proportion ~ averagescore, data = merged_genre) summary(genremodel)</code></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = proportion ~ averagescore, data = merged_genre)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.016446 -0.007392 -0.003684 -0.000983  0.086157 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)  0.005254   0.002928   1.795   0.0763 .
+averagescore 0.010430   0.004569   2.283   0.0250 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.01567 on 84 degrees of freedom
+Multiple R-squared:  0.0584,    Adjusted R-squared:  0.04719 
+F-statistic:  5.21 on 1 and 84 DF,  p-value: 0.02499</code></pre>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

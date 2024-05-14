@@ -20,10 +20,10 @@ amazontop <- read_csv("data/amazontop - Sheet1.csv")
 bookishdata_sm <- read_csv("data/Bookish Data (Responses) Actual - sm.csv")
   
 bookishdata_genre <- read_csv("data/bookishdata - genre1.csv")
-View(bookishdata_genre)
+# View(bookishdata_genre)
 
 bookishdata_books <- read_csv("data/bookishdata - books.csv")
-View(bookishdata_books)
+# View(bookishdata_books)
 ```
 
 # **Write-up**

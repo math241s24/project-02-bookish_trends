@@ -145,4 +145,8 @@ print(merged_genre)
 ggplot(merged_genre, aes(x=proportion, y=averagescore)) + geom_point() + labs(x= "Proportion of Amazon's Top 100", y= "Average Social Media presence Scale 0-2", title= "Bestselling Makeup by Genre and Social Media Presence Rating")
 ```
 
-`{r. echo= FALSE} genremodel <- lm(proportion ~ averagescore, data = merged_genre) summary(genremodel)`
+```{r, echo = FALSE} 
+genremodel <- lm(proportion ~ averagescore, data = merged_genre)
+
+summary(genremodel)
+```
