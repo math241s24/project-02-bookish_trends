@@ -10,8 +10,6 @@ editor: visual
 #| label: load-pkgs
 #| message: false
 #| warning: false
-
-library(tidyverse)
 ```
 
 ## Dataset

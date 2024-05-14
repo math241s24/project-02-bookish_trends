@@ -7,7 +7,7 @@ website:
   navbar:
     right:
       - icon: github
-        href: https://github.com/math241s24/project-02
+        href: https://math241s24.github.io/project-02-bookish_trends/
     left:
       - text: "Project"
         href: WriteUp.qmd
